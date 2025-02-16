@@ -18,6 +18,7 @@ use Illuminate\Support\Facades\Route;
 require __DIR__.'/auth.php';
 
 Route::get('/', [UserController::class, 'index'])->name('home');
+Route::get('/', [UserController::class, 'about'])->name('about');
 Route::get('djli-admin/login',[UserController::class, 'djliLogin'])->name('djliLogin');
 Route::middleware('auth')->group(function () {
     Route::controller(AdminController::class)->group(function () {

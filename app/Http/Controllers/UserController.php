@@ -13,15 +13,20 @@ class UserController extends Controller
 
     public function djliLogin()
     {
-        return view('frontend.login');
-    }
-    public function index()
-    {
         if(auth()->user()){
             return view('admin.admin_dashboard');
         }else{
             return view('frontend.login');
         }
+    }
+    public function index()
+    {
+        return view('frontend.index');
+    }
+
+    public function about()
+    {
+        return view('frontend.about');
     }
 
     public function UserLogout(Request $request)
