@@ -21,12 +21,17 @@ class UserController extends Controller
     }
     public function index()
     {
-        return view('frontend.index');
+        return view('frontend.home');
     }
 
     public function about()
     {
         return view('frontend.about');
+    }
+
+    public function contact()
+    {
+        return view('frontend.contact');
     }
 
     public function UserLogout(Request $request)
