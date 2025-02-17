@@ -195,7 +195,7 @@
                 </div>
             </div>
 
-            <div class="text-center"><button type="submit">Send Message</button></div>
+            <div class="text-center mt-5"><button type="submit">SUBMIT APPLICATION</button></div>
           </form>
         </div>
 
