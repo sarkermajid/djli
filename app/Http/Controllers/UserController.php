@@ -34,6 +34,11 @@ class UserController extends Controller
         return view('frontend.contact');
     }
 
+    public function applyNow()
+    {
+        return view('frontend.apply_now');
+    }
+
     public function UserLogout(Request $request)
     {
         Auth::guard('web')->logout();

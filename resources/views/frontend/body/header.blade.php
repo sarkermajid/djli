@@ -10,6 +10,7 @@
           <li><a href="{{ route('about') }}">About</a></li>
           <li><a href="#">Services</a></li>
           <li><a href="{{ route('contact') }}">Contact</a></li>
+          <li><a href="{{ route('applyNow') }}">Apply Now</a></li>
 
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>

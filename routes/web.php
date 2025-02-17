@@ -20,6 +20,7 @@ require __DIR__.'/auth.php';
 Route::get('/', [UserController::class, 'index'])->name('home');
 Route::get('/about', [UserController::class, 'about'])->name('about');
 Route::get('/contact', [UserController::class, 'contact'])->name('contact');
+Route::get('/apply-now', [UserController::class, 'applyNow'])->name('applyNow');
 Route::get('djli-admin/login',[UserController::class, 'djliLogin'])->name('djliLogin');
 Route::middleware('auth')->group(function () {
     Route::controller(AdminController::class)->group(function () {
