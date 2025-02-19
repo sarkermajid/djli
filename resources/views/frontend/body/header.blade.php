@@ -8,6 +8,7 @@
         <ul>
           <li><a href="{{ route('home') }}" class="active">Home</a></li>
           <li><a href="{{ route('about') }}">About</a></li>
+          <li><a href="{{ route('branches') }}">Branches</a></li>
           <li><a href="#">Services</a></li>
           <li><a href="{{ route('contact') }}">Contact</a></li>
           <li><a href="{{ route('applyNow') }}">Apply Now</a></li>

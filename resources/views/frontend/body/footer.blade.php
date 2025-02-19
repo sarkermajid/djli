@@ -54,7 +54,7 @@
 
       <div class="me-md-auto text-center text-md-start">
         <div class="copyright">
-          &copy; Copyright <strong><span>DJLI</span></strong>. All Rights Reserved
+          &copy; Copyright <strong><span>DHAKA JAPANESE LANGUAGE INSTITUTE</span></strong>. All Rights Reserved
         </div>
         <div class="credits">
           Designed by <a href="https://sarkermajid.github.io/" target="_blank">Sarker Majid</a>.

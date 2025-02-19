@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\HomeController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
@@ -17,11 +18,12 @@ use Illuminate\Support\Facades\Route;
 
 require __DIR__.'/auth.php';
 
-Route::get('/', [UserController::class, 'index'])->name('home');
-Route::get('/about', [UserController::class, 'about'])->name('about');
-Route::get('/contact', [UserController::class, 'contact'])->name('contact');
-Route::get('/apply-now', [UserController::class, 'applyNow'])->name('applyNow');
-Route::get('djli-admin/login',[UserController::class, 'djliLogin'])->name('djliLogin');
+Route::get('/', [HomeController::class, 'index'])->name('home');
+Route::get('/about', [HomeController::class, 'about'])->name('about');
+Route::get('/branches', [HomeController::class, 'branches'])->name('branches');
+Route::get('/contact', [HomeController::class, 'contact'])->name('contact');
+Route::get('/apply-now', [HomeController::class, 'applyNow'])->name('applyNow');
+Route::get('djli-admin/login',[HomeController::class, 'djliLogin'])->name('djliLogin');
 Route::middleware('auth')->group(function () {
     Route::controller(AdminController::class)->group(function () {
         Route::get('admin/dashboard', 'AdminDashboard')->name('admin.dashboard');
