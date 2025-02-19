@@ -7,7 +7,10 @@
         <div class="col-lg-12">
             <form action="forms/contact.php" method="post" role="form" class="php-email-form">
             <div class="row">
-              <h3 class="text-center mb-3" style="color: #EA232A">DHAKA JAPANESE LANGUAGE INSTITUTE APPLICATION FORM</h3>
+                <div style="text-align:center; padding-bottom:20px;">
+                    <img src="{{ asset('frontend/assets/img/LOGO DJLI.png') }}" style="width:80px;" alt="">
+                </div>
+              <h3 class="text-center mb-5" style="color: #EA232A">DHAKA JAPANESE LANGUAGE INSTITUTE APPLICATION FORM</h3>
               <div class="row">
                 <div class="col-md-6 form-group">
 
