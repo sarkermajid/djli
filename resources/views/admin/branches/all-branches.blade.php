@@ -29,7 +29,6 @@
                                         <td>{{ $item->director_name}}</td>
                                         <td>
                                             <a href="{{ route('branch.view', ['id'=>$item->id]) }}" class="btn btn-inverse-info"> View </a>
-                                            <a href="{{ route('branch.edit', ['id'=>$item->id]) }}" class="btn btn-inverse-primary">Edit</a>
                                             <a href="{{ route('branch.delete',['id'=>$item->id]) }}" id="delete" class="btn btn-inverse-danger"> Delete </a>
                                         </td>
                                     </tr>
