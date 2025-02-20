@@ -27,6 +27,13 @@
             </a>
           </li>
 
+          <li class="nav-item">
+            <a class="nav-link" href="{{ route('branches') }}">
+              <i class="link-icon" data-feather="chevron-right"></i>
+              <span class="link-title">Branches</span>
+            </a>
+          </li>
+
 
         </ul>
       </div>

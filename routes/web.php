@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\BranchController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
@@ -32,6 +33,16 @@ Route::middleware('auth')->group(function () {
         Route::post('admin/profile/update', 'AdminProfileUpdate')->name('admin.profile.update');
         Route::get('admin/change/password', 'AdminChangePassword')->name('admin.change.password');
         Route::post('admin/update/password', 'AdminUpdatePassword')->name('admin.update.password');
+    });
+
+    Route::controller(BranchController::class)->group(function(){
+        Route::get('branches', 'index')->name('branches');
+        Route::get('branch/add', 'branchAdd')->name('branch.add');
+        Route::post('branch/store', 'branchStore')->name('branch.store');
+        Route::get('branch/view/{id}', 'branchView')->name('branch.view');
+        Route::get('branch/edit/{id}', 'branchEdit')->name('branch.edit');
+        Route::post('branch/update', 'branchUpdate')->name('branch.update');
+        Route::get('branch/delete/{id}', 'branchDelete')->name('branch.delete');
     });
 
 });
