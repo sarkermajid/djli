@@ -36,13 +36,11 @@ Route::middleware('auth')->group(function () {
     });
 
     Route::controller(BranchController::class)->group(function(){
-        Route::get('branches', 'index')->name('branches');
-        Route::get('branch/add', 'branchAdd')->name('branch.add');
-        Route::post('branch/store', 'branchStore')->name('branch.store');
-        Route::get('branch/view/{id}', 'branchView')->name('branch.view');
-        Route::get('branch/edit/{id}', 'branchEdit')->name('branch.edit');
-        Route::post('branch/update', 'branchUpdate')->name('branch.update');
-        Route::get('branch/delete/{id}', 'branchDelete')->name('branch.delete');
+        Route::get('admin/branches', 'index')->name('branches.all');
+        Route::get('admin/branch/add', 'branchAdd')->name('branch.add');
+        Route::post('admin/branch/store', 'branchStore')->name('branch.store');
+        Route::get('admin/branch/view/{id}', 'branchView')->name('branch.view');
+        Route::get('admin/branch/delete/{id}', 'branchDelete')->name('branch.delete');
     });
 
 });

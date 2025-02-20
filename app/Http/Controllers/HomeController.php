@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
+use App\Models\Branch;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -27,7 +28,8 @@ class HomeController extends Controller
 
     public function branches()
     {
-        return view('frontend.branches');
+        $branches = Branch::all();
+        return view('frontend.branches',compact('branches'));
     }
 
     public function contact()

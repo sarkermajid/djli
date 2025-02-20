@@ -28,7 +28,7 @@
           </li>
 
           <li class="nav-item">
-            <a class="nav-link" href="{{ route('branches') }}">
+            <a class="nav-link" href="{{ route('branches.all') }}">
               <i class="link-icon" data-feather="chevron-right"></i>
               <span class="link-title">Branches</span>
             </a>
