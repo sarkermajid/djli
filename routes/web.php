@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\BranchController;
+use App\Http\Controllers\ConsultancyBookController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
@@ -26,6 +27,7 @@ Route::get('/services', [HomeController::class, 'services'])->name('services');
 Route::get('/contact', [HomeController::class, 'contact'])->name('contact');
 Route::get('/apply-now', [HomeController::class, 'applyNow'])->name('applyNow');
 Route::get('/book-now', [HomeController::class, 'bookNow'])->name('bookNow');
+Route::post('/submit-book-now', [HomeController::class, 'submitBook'])->name('submitBook');
 Route::get('djli-admin/login',[HomeController::class, 'djliLogin'])->name('djliLogin');
 Route::middleware('auth')->group(function () {
     Route::controller(AdminController::class)->group(function () {
@@ -43,6 +45,11 @@ Route::middleware('auth')->group(function () {
         Route::post('admin/branch/store', 'branchStore')->name('branch.store');
         Route::get('admin/branch/view/{id}', 'branchView')->name('branch.view');
         Route::get('admin/branch/delete/{id}', 'branchDelete')->name('branch.delete');
+    });
+
+    Route::controller(ConsultancyBookController::class)->group(function (){
+        Route::get('admin/consultancies', 'index')->name('consultancies.all');
+        Route::get('admin/consultancies/delete/{id}', 'consultancyDelete')->name('consultancies.delete');
     });
 
 });

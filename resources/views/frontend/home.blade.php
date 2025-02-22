@@ -22,7 +22,7 @@
                         <p><i class="ri-check-double-line"></i> Personalized Guidance</p>
                         <p><i class="ri-check-double-line"></i> Expert Advice on Study & Visa Process</p>
                         <p><i class="ri-check-double-line"></i>Hassle-Free Application Support</p>
-                        <a href="{{ route('bookNow') }}" class="btn mb-4" style="border:1px solid #EA232A; background-color:#EA232A; color:white">Book Now</a>
+                        <a href="{{ route('bookNow') }}" class="btn mb-4" style="border:1px solid #EA232A; background-color:#EA232A; color:white; width:200px; padding:10px;">Free Consultancy</a>
                     </div>
                     <div class="col-lg-12" data-aos="fade-right">
                         <h3>Why Apply Online?</h3>
@@ -33,7 +33,7 @@
                         <p><i class="ri-check-double-line"></i> Personalized Support – Our team is available to assist you throughout the application process.</p>
                         <p><i class="ri-check-double-line"></i> Error-Free Submission – Our guided online application minimizes mistakes and ensures completeness.</p>
                         <p><i class="ri-check-double-line"></i> Data Security – Your personal information is protected with advanced security measures, ensuring confidentiality and privacy.</p>
-                        <a href="" class="btn mb-4" style="border:1px solid #EA232A; background-color:#EA232A; color:white">Apply Here</a>
+                        <a href="{{ route('applyNow') }}" class="btn mb-4" style="border:1px solid #EA232A; background-color:#EA232A; color:white; width:200px; padding:10px;">Apply Now</a>
                     </div>
                 </div>
 

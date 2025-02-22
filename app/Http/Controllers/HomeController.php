@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
+use App\Models\BookNow;
 use App\Models\Branch;
 use Illuminate\Http\Request;
 
@@ -50,5 +51,18 @@ class HomeController extends Controller
     public function bookNow()
     {
         return view('frontend.book_now');
+    }
+
+    public function submitBook(Request $request)
+    {
+        $bookNow = new BookNow();
+        $bookNow->name = $request->name;
+        $bookNow->city = $request->city;
+        $bookNow->qualification = $request->qualification;
+        $bookNow->phone = $request->phone;
+        $bookNow->booking_date = $request->booking_date;
+        $bookNow->save();
+        return redirect()->back()->with('success', 'Your booking request has been submitted successfully. We will contact you soon.');
+
     }
 }

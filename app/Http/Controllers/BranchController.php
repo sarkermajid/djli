@@ -70,6 +70,6 @@ class BranchController extends Controller
             'message' => 'Branch Deleted Successfully',
             'alert-type' => 'success'
         );
-        return redirect()->route('branches')->with($notification);
+        return redirect()->route('branches.all')->with($notification);
     }
 }
