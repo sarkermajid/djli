@@ -1,7 +1,6 @@
 @extends('frontend.index')
 
 @section('frontend')
-    <!-- ======= Services Section ======= -->
     <section id="services" class="services section-bg" style="margin-top: 80px;">
         <div class="container" data-aos="fade-up">
 
@@ -21,5 +20,5 @@
             </div>
 
         </div>
-    </section><!-- End Services Section -->
+    </section>
 @endsection

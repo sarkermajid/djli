@@ -18,7 +18,8 @@ class HomeController extends Controller
     }
     public function index()
     {
-        return view('frontend.home');
+        $branches = Branch::all();
+        return view('frontend.home',compact('branches'));
     }
 
     public function about()
@@ -30,6 +31,11 @@ class HomeController extends Controller
     {
         $branches = Branch::all();
         return view('frontend.branches',compact('branches'));
+    }
+
+    public function services()
+    {
+        return view('frontend.services');
     }
 
     public function contact()

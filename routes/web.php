@@ -22,6 +22,7 @@ require __DIR__.'/auth.php';
 Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::get('/about', [HomeController::class, 'about'])->name('about');
 Route::get('/branches', [HomeController::class, 'branches'])->name('branches');
+Route::get('/services', [HomeController::class, 'services'])->name('services');
 Route::get('/contact', [HomeController::class, 'contact'])->name('contact');
 Route::get('/apply-now', [HomeController::class, 'applyNow'])->name('applyNow');
 Route::get('djli-admin/login',[HomeController::class, 'djliLogin'])->name('djliLogin');
