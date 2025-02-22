@@ -14,14 +14,17 @@
                 <div class="row content">
                     <div class="col-lg-12" data-aos="fade-right">
                         <h2>DHAKA JAPANESE LANGUAGE INSTITUTE</h2>
-                        <p style="font-size: 18px;">journey, we established the Dhaka Japanese Language Institute, not just as a language school but as a gateway to countless opportunities.
-
-                            We are more than just a language institute—we are a team of passionate individuals who believe in the power of education to transform lives. Our skilled team is dedicated to guiding every student with care, ensuring they achieve their academic and career aspirations.
-
-                            Our journey began with a simple vision: to help students study abroad and experience new cultures. Over the years, we have supported thousands of students in realizing their potential and reaching new heights in their academic and personal lives.</p>
+                        <p style="font-size: 18px;">Since 2017, We have been committed to helping students to fulfill their Dreams in Japan.In view of its continuity, we established the Dhaka Japanese Language Institute. We are more than a Language Institute in Dhaka. We are a team of passionate individuals who believe in the power of education to transform lives. We have a skilled team who are committed to helping each student fulfill their dreams with care.Our journey began with a simple vision – to help students achieve their dreams of studying abroad and experiencing new cultures. Over the years, we have helped thousands of students realize their potential and reach new heights in their academic and personal lives.</p>
+                    </div>
+                    <div class="col-lg-12 pt-3" data-aos="fade-right">
+                        <h3>Book a Free Consultation 📞</h3>
+                        <p>Take the first step toward your dream of studying in Japan! Our expert team is here to guide you through language learning, university selection, visa applications, and more—all for free.</p>
+                        <p><i class="ri-check-double-line"></i> Personalized Guidance</p>
+                        <p><i class="ri-check-double-line"></i> Expert Advice on Study & Visa Process</p>
+                        <p><i class="ri-check-double-line"></i>Hassle-Free Application Support</p>
+                        <a href="{{ route('bookNow') }}" class="btn mb-4" style="border:1px solid #EA232A; background-color:#EA232A; color:white">Book Now</a>
                     </div>
                     <div class="col-lg-12" data-aos="fade-right">
-                        <a href="" class="btn mt-4 mb-4" style="border:1px solid #EA232A; background-color:#EA232A; color:white">Apply Here</a>
                         <h3>Why Apply Online?</h3>
                         <p>Applying online offers a hassle-free and efficient process to kickstart your journey toward studying in Japan. Here’s why you should apply online today:</p>
                         <p><i class="ri-check-double-line"></i> Convenience – Apply from anywhere, anytime, without visiting our office.</p>
@@ -30,6 +33,7 @@
                         <p><i class="ri-check-double-line"></i> Personalized Support – Our team is available to assist you throughout the application process.</p>
                         <p><i class="ri-check-double-line"></i> Error-Free Submission – Our guided online application minimizes mistakes and ensures completeness.</p>
                         <p><i class="ri-check-double-line"></i> Data Security – Your personal information is protected with advanced security measures, ensuring confidentiality and privacy.</p>
+                        <a href="" class="btn mb-4" style="border:1px solid #EA232A; background-color:#EA232A; color:white">Apply Here</a>
                     </div>
                 </div>
 
@@ -69,15 +73,9 @@
                     </div>
                     <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
                         <div class="icon-box iconbox-blue">
-                            <h4 style="color: #EA232A">Application
+                            <h4 style="color: #EA232A">Visa Application
                             </h4>
-                            <p>The application process can be complex and time-consuming. We provide end-to-end support in
-                                preparing and submitting your application, ensuring all documents are accurate and complete.
-                                Our
-                                team assists with personal statements, recommendation letters, and any additional
-                                requirements
-                                specific to your chosen institution. With our expertise, we maximize your chances of
-                                acceptance.
+                            <p>Securing a student visa is an essential part of studying abroad. Our visa experts guide you through the entire process, from filling out application forms to preparing for the visa interview. We provide up-to-date information on visa requirements, required documents, and potential challenges, ensuring a smooth and stress-free application process.
                             </p>
                         </div>
                     </div>

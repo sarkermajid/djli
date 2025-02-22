@@ -47,4 +47,8 @@ class HomeController extends Controller
     {
         return view('frontend.apply_now');
     }
+    public function bookNow()
+    {
+        return view('frontend.book_now');
+    }
 }

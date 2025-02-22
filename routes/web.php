@@ -25,6 +25,7 @@ Route::get('/branches', [HomeController::class, 'branches'])->name('branches');
 Route::get('/services', [HomeController::class, 'services'])->name('services');
 Route::get('/contact', [HomeController::class, 'contact'])->name('contact');
 Route::get('/apply-now', [HomeController::class, 'applyNow'])->name('applyNow');
+Route::get('/book-now', [HomeController::class, 'bookNow'])->name('bookNow');
 Route::get('djli-admin/login',[HomeController::class, 'djliLogin'])->name('djliLogin');
 Route::middleware('auth')->group(function () {
     Route::controller(AdminController::class)->group(function () {

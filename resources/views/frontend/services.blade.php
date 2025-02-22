@@ -30,12 +30,9 @@
                 </div>
                 <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
                     <div class="icon-box iconbox-blue">
-                        <h4 style="color: #EA232A">Application
+                        <h4 style="color: #EA232A">Visa Application
                         </h4>
-                        <p>The application process can be complex and time-consuming. We provide end-to-end support in
-                            preparing and submitting your application, ensuring all documents are accurate and complete. Our
-                            team assists with personal statements, recommendation letters, and any additional requirements
-                            specific to your chosen institution. With our expertise, we maximize your chances of acceptance.
+                        <p>Securing a student visa is an essential part of studying abroad. Our visa experts guide you through the entire process, from filling out application forms to preparing for the visa interview. We provide up-to-date information on visa requirements, required documents, and potential challenges, ensuring a smooth and stress-free application process.
                         </p>
                     </div>
                 </div>
