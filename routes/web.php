@@ -4,6 +4,7 @@ use App\Http\Controllers\AdminController;
 use App\Http\Controllers\BranchController;
 use App\Http\Controllers\ConsultancyBookController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\TeamMemberController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
@@ -50,6 +51,13 @@ Route::middleware('auth')->group(function () {
     Route::controller(ConsultancyBookController::class)->group(function (){
         Route::get('admin/consultancies', 'index')->name('consultancies.all');
         Route::get('admin/consultancies/delete/{id}', 'consultancyDelete')->name('consultancies.delete');
+    });
+
+    Route::controller(TeamMemberController::class)->group(function(){
+        Route::get('admin/team-members', 'index')->name('team.members.all');
+        Route::get('admin/team-member/add', 'teamMemberAdd')->name('team.member.add');
+        Route::post('admin/team-member/store', 'teamMemberStore')->name('team.member.store');
+        Route::get('admin/team-member/delete/{id}', 'teamMemberDelete')->name('team.member.delete');
     });
 
 });

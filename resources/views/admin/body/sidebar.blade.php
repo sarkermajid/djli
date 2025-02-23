@@ -41,6 +41,13 @@
             </a>
           </li>
 
+          <li class="nav-item">
+            <a class="nav-link" href="{{ route('team.members.all') }}">
+              <i class="link-icon" data-feather="chevron-right"></i>
+              <span class="link-title">Team Members</span>
+            </a>
+          </li>
+
 
         </ul>
       </div>

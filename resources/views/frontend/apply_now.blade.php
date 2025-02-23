@@ -5,7 +5,7 @@
     <div class="container" style="margin-top: 80px;">
       <div class="row mt-5 justify-content-center" data-aos="fade-up">
         <div class="col-lg-12">
-            <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+            <form action="forms/contact.php" method="post" role="form" class="form-design">
             <div class="row">
                 <div style="text-align:center; padding-bottom:20px;">
                     <img src="{{ asset('frontend/assets/img/LOGO DJLI.png') }}" style="width:80px;" alt="">
