@@ -7,43 +7,38 @@
 
           <div class="col-lg-3 col-md-6 footer-contact">
             <h3>Company</h3>
-            <p>
-              A108 Adam Street <br>
-              New York, NY 535022<br>
-              United States <br><br>
-              <strong>Phone:</strong> +1 5589 55488 55<br>
-              <strong>Email:</strong> info@example.com<br>
-            </p>
+            <h6 style="color:#d5d5d5"">Bangladesh Office</h6>
+            <p>42/4 (2nd Floor), Hatkhola Road, Tikatuli, Dhaka-1203</p>
+            <h6 style="margin-top: 10px; color:#d5d5d5">Japan Office</h6>
+            <p>Hyogo-ken, kobe-shi, Higashi Nadu ku, kita, Ogi 1-2-6-302, Japan</p>
           </div>
 
           <div class="col-lg-2 col-md-6 footer-links">
             <h4>Useful Links</h4>
             <ul>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Home</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">About us</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Services</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Terms of service</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Privacy policy</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="{{ route('home') }}">Home</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="{{ route('about') }}">About</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="{{ route('services') }}">Services</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="{{ route('branches') }}">Branches</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="{{ route('contact') }}">Contact</a></li>
             </ul>
           </div>
 
           <div class="col-lg-3 col-md-6 footer-links">
             <h4>Our Services</h4>
             <ul>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Web Design</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Web Development</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Product Management</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Marketing</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Graphic Design</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Schools and Universities Selection</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Interview Preparation</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Visa Application</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Application</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Accommodation Support</a></li>
             </ul>
           </div>
 
           <div class="col-lg-4 col-md-6 footer-newsletter">
-            <h4>Join Our Newsletter</h4>
-            <p>Tamen quem nulla quae legam multos aute sint culpa legam noster magna</p>
-            <form action="" method="post">
-              <input type="email" name="email"><input type="submit" value="Subscribe">
-            </form>
+            <h4>Why Apply Online?</h4>
+            <p>Applying online offers a hassle-free and efficient process to kickstart your journey toward studying in Japan.</p>
+            <a href="{{ route('applyNow') }}" class="btn mb-4" style="border:1px solid #EA232A; background-color:#EA232A; color:white; width:350px; padding:10px;">Apply Now</a>
           </div>
         </div>
       </div>
