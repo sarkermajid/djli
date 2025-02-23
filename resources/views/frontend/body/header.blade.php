@@ -6,12 +6,12 @@
 
       <nav id="navbar" class="navbar order-last order-lg-0">
         <ul>
-          <li><a href="{{ route('home') }}" class="active">Home</a></li>
-          <li><a href="{{ route('about') }}">About</a></li>
-          <li><a href="{{ route('branches') }}">Branches</a></li>
-          <li><a href="{{ route('services') }}">Services</a></li>
-          <li><a href="{{ route('contact') }}">Contact</a></li>
-          <li><a href="{{ route('applyNow') }}">Apply Now</a></li>
+            <li><a href="{{ route('home') }}" class="{{ Route::currentRouteName() == 'home' ? 'active' : '' }}">Home</a></li>
+            <li><a href="{{ route('about') }}" class="{{ Route::currentRouteName() == 'about' ? 'active' : '' }}">About</a></li>
+            <li><a href="{{ route('branches') }}" class="{{ Route::currentRouteName() == 'branches' ? 'active' : '' }}">Branches</a></li>
+            <li><a href="{{ route('services') }}" class="{{ Route::currentRouteName() == 'services' ? 'active' : '' }}">Services</a></li>
+            <li><a href="{{ route('contact') }}" class="{{ Route::currentRouteName() == 'contact' ? 'active' : '' }}">Contact</a></li>
+            <li><a href="{{ route('applyNow') }}" class="{{ Route::currentRouteName() == 'applyNow' ? 'active' : '' }}">Apply Now</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav>

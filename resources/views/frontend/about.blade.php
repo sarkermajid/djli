@@ -4,7 +4,9 @@
         <!-- ======= About Us Section ======= -->
         <section id="about-us" class="about-us" style="margin-top: 80px;">
             <div class="container" data-aos="fade-up">
-
+                <div class="section-title" data-aos="fade-up">
+                    <h2>About Us</h2>
+                </div>
               <div class="row content">
                 <div class="col-lg-12" data-aos="fade-right">
                   <h2>DHAKA JAPANESE LANGUAGE INSTITUTE</h2>

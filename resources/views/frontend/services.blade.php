@@ -4,7 +4,9 @@
     <!-- ======= Services Section ======= -->
     <section id="services" class="services section-bg" style="margin-top: 80px;">
         <div class="container" data-aos="fade-up">
-
+            <div class="section-title" data-aos="fade-up">
+                <h2>Services</h2>
+            </div>
             <div class="row">
                 <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
                     <div class="icon-box iconbox-blue">
