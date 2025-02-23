@@ -10,6 +10,7 @@
             <li><a href="{{ route('about') }}" class="{{ Route::currentRouteName() == 'about' ? 'active' : '' }}">About</a></li>
             <li><a href="{{ route('branches') }}" class="{{ Route::currentRouteName() == 'branches' ? 'active' : '' }}">Branches</a></li>
             <li><a href="{{ route('services') }}" class="{{ Route::currentRouteName() == 'services' ? 'active' : '' }}">Services</a></li>
+            <li><a href="{{ route('gallery') }}" class="{{ Route::currentRouteName() == 'gallery' ? 'active' : '' }}">Gallery</a></li>
             <li><a href="{{ route('contact') }}" class="{{ Route::currentRouteName() == 'contact' ? 'active' : '' }}">Contact</a></li>
             <li><a href="{{ route('applyNow') }}" class="{{ Route::currentRouteName() == 'applyNow' ? 'active' : '' }}">Apply Now</a></li>
         </ul>

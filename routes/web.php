@@ -25,6 +25,7 @@ Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::get('/about', [HomeController::class, 'about'])->name('about');
 Route::get('/branches', [HomeController::class, 'branches'])->name('branches');
 Route::get('/services', [HomeController::class, 'services'])->name('services');
+Route::get('/gallery', [HomeController::class, 'gallery'])->name('gallery');
 Route::get('/contact', [HomeController::class, 'contact'])->name('contact');
 Route::get('/apply-now', [HomeController::class, 'applyNow'])->name('applyNow');
 Route::get('/book-now', [HomeController::class, 'bookNow'])->name('bookNow');

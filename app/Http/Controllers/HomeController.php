@@ -36,6 +36,11 @@ class HomeController extends Controller
         return view('frontend.branches',compact('branches'));
     }
 
+    public function gallery()
+    {
+        return view('frontend.gallery');
+    }
+
     public function services()
     {
         return view('frontend.services');
