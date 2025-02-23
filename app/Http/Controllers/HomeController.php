@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Controllers\Controller;
 use App\Models\BookNow;
 use App\Models\Branch;
+use App\Models\GalleryModel;
 use App\Models\TeamMember;
 use Illuminate\Http\Request;
 
@@ -38,7 +39,8 @@ class HomeController extends Controller
 
     public function gallery()
     {
-        return view('frontend.gallery');
+        $galleries = GalleryModel::all();
+        return view('frontend.gallery',compact('galleries'));
     }
 
     public function services()

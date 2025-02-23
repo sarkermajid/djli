@@ -3,6 +3,7 @@
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\BranchController;
 use App\Http\Controllers\ConsultancyBookController;
+use App\Http\Controllers\GalleryController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\TeamMemberController;
 use App\Http\Controllers\UserController;
@@ -59,6 +60,13 @@ Route::middleware('auth')->group(function () {
         Route::get('admin/team-member/add', 'teamMemberAdd')->name('team.member.add');
         Route::post('admin/team-member/store', 'teamMemberStore')->name('team.member.store');
         Route::get('admin/team-member/delete/{id}', 'teamMemberDelete')->name('team.member.delete');
+    });
+
+    Route::controller(GalleryController::class)->group(function(){
+        Route::get('admin/gallery-image', 'index')->name('gallery.image.all');
+        Route::get('admin/gallery-image/add', 'galleryImageAdd')->name('gallery.image.add');
+        Route::post('admin/gallery-image/store', 'galleryImageStore')->name('gallery.image.store');
+        Route::get('admin/gallery-image/delete/{id}', 'galleryImageDelete')->name('gallery.image.delete');
     });
 
 });
