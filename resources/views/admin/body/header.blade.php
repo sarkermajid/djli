@@ -7,8 +7,8 @@
              @php
                  $profile = App\Models\User::find(auth()->user()->id);
              @endphp
-
              <li class="nav-item dropdown">
+                 <a href="{{ route('home') }}" target="_blank" style="margin-right: 20px;" class="btn btn-inverse-primary">Visit Website</a>
                  <a class="nav-link dropdown-toggle" href="#" id="profileDropdown" role="button"
                      data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                      <p class="text-white">Profile Settings</p>

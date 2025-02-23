@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Controllers\Controller;
 use App\Models\BookNow;
 use App\Models\Branch;
+use App\Models\TeamMember;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -25,7 +26,8 @@ class HomeController extends Controller
 
     public function about()
     {
-        return view('frontend.about');
+        $teamMembers = TeamMember::all();
+        return view('frontend.about',compact('teamMembers'));
     }
 
     public function branches()
