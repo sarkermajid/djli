@@ -67,7 +67,6 @@ class HomeController extends Controller
 
     public function submitForm(Request $request)
     {
-        // dd($request->all());
         $request->validate([
             'as_per' => 'required|string|max:255',
             'name' => 'required|string|max:255',
@@ -146,30 +145,46 @@ class HomeController extends Controller
 
         $applicationForm->save();
 
-        $japaneaseExamCount = count($request->exam_name);
-        if($japaneaseExamCount != null){
-            for($i = 0; $i < $japaneaseExamCount; $i++){
-                $japaneaseExam = new JapaneseExam();
-                $japaneaseExam->application_id = $applicationForm->id;
-                $japaneaseExam->exam_name = $request->exam_name[$i];
-                $japaneaseExam->exam_year = $request->exam_year[$i];
-                $japaneaseExam->result = $request->result[$i];
-                $japaneaseExam->save();
+        if (!empty($request->exam_name)) {
+            // Remove null or empty values from the array
+            $filteredExamNames = array_filter($request->exam_name, function ($value) {
+                return !empty($value);
+            });
+
+            $japaneseExamCount = count($filteredExamNames);
+            if ($japaneseExamCount > 0) {
+                for ($i = 0; $i < $japaneseExamCount; $i++) {
+                    $japaneseExam = new JapaneseExam();
+                    $japaneseExam->application_id = $applicationForm->id;
+                    $japaneseExam->exam_name = $request->exam_name[$i];
+                    $japaneseExam->exam_year = $request->exam_year[$i] ?? null;
+                    $japaneseExam->result = $request->result[$i] ?? null;
+                    $japaneseExam->save();
+                }
             }
         }
 
-        $familyMemberCount = count($request->fm_name);
-        if($familyMemberCount!= null){
-            for($i = 0; $i < $familyMemberCount; $i++){
-                $familyMember = new FamilyMember();
-                $familyMember->application_id = $applicationForm->id;
-                $familyMember->name = $request->fm_name[$i];
-                $familyMember->relationship = $request->relationship[$i];
-                $familyMember->dob = $request->fm_dob[$i];
-                $familyMember->occupation = $request->occupation[$i];
-                $familyMember->save();
+        if (!empty($request->fm_name)) {
+            // Remove null or empty values from the array
+            $filteredFamilyMembers = array_filter($request->fm_name, function ($value) {
+                return !empty($value);
+            });
+
+            $familyMemberCount = count($filteredFamilyMembers);
+            if ($familyMemberCount > 0) {
+                for ($i = 0; $i < $familyMemberCount; $i++) {
+                    $familyMember = new FamilyMember();
+                    $familyMember->application_id = $applicationForm->id;
+                    $familyMember->name = $request->fm_name[$i];
+                    $familyMember->relationship = $request->relationship[$i] ?? null;
+                    $familyMember->dob = $request->fm_dob[$i] ?? null;
+                    $familyMember->occupation = $request->occupation[$i] ?? null;
+                    $familyMember->save();
+                }
             }
         }
+
+
 
         return redirect()->back()->with('success', 'Your Application has been submitted successfully. We will contact you soon.');
 
