@@ -5,7 +5,7 @@
     <div class="container" style="margin-top: 80px;">
       <div class="row mt-5 justify-content-center" data-aos="fade-up">
         <div class="col-lg-12">
-            <form action="{{ route('submitForm') }}" method="post" role="form" class="form-design">
+            <form action="{{ route('submitForm') }}" method="post" role="form" class="form-design" enctype="multipart/form-data">
             @csrf
             <div class="row">
                 <div style="text-align:center; padding-bottom:20px;">
@@ -208,7 +208,7 @@
                         <label for="passport" class="mb-2 ml-2">MASTERS</label>
                         <div class="row">
                             <div class="col-lg-4">
-                                <input type="text" class="form-control" id="" name="msc_sch_name" placeholder="NAME OF SCHOOL">
+                                <input type="text" class="form-control" id="" name="msc_name" placeholder="NAME OF SCHOOL">
                             </div>
                             <div class="col-lg-4">
                                 <input type="text" class="form-control" id="msc_date_exp" name="msc_date_exp"
@@ -231,15 +231,15 @@
                                 <label for="" class="mb-2 ml-2">JAPANESE LANGUAGE ABILITY</label>
                             </div>
                             <div class="col-lg-9">
-                                <!-- Yes/No Checkbox option -->
+                                <!-- Yes/No Radio Button Option -->
                                 <div class="">
                                     <label class="mb-2">DID YOU APPLY BEFORE?</label>
                                     <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="checkbox" id="applied_yes" style="height: 20px;" name="applied_before" value="yes">
+                                        <input class="form-check-input" type="radio" id="applied_yes" style="height: 15px;" name="apply_before" value="Yes">
                                         <label class="form-check-label" for="applied_yes">Yes</label>
                                     </div>
                                     <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="checkbox" id="applied_no" style="height: 20px;" name="applied_before" value="no">
+                                        <input class="form-check-input" type="radio" id="applied_no" style="height: 15px;" name="apply_before" value="No">
                                         <label class="form-check-label" for="applied_no">No</label>
                                     </div>
                                 </div>
@@ -250,9 +250,7 @@
                                 <input type="text" class="form-control" id="exam_name[]" name="exam_name[]" placeholder="NAME OF EXAM" >
                             </div>
                             <div class="col-lg-4">
-                                <input type="text" class="form-control" id="exam_year[]" name="exam_year[]"
-                                placeholder="YEAR OF EXAM" onfocus="(this.type='date')"
-                                onblur="if(!this.value) this.type='text';">
+                                <input type="text" class="form-control" id="exam_year[]" name="exam_year[]" placeholder="YEAR OF EXAM" >
                             </div>
                             <div class="col-lg-4">
                                 <input type="text" class="form-control" id="result[]" name="result[]" placeholder="RESULT">
@@ -263,9 +261,7 @@
                                 <input type="text" class="form-control" id="exam_name[]" name="exam_name[]" placeholder="NAME OF EXAM" >
                             </div>
                             <div class="col-lg-4">
-                                <input type="text" class="form-control" id="exam_year[]" name="exam_year[]"
-                                placeholder="YEAR OF EXAM" onfocus="(this.type='date')"
-                                onblur="if(!this.value) this.type='text';">
+                                <input type="text" class="form-control" id="exam_year[]" name="exam_year[]" placeholder="YEAR OF EXAM" >
                             </div>
                             <div class="col-lg-4">
                                 <input type="text" class="form-control" id="result[]" name="result[]" placeholder="RESULT">
@@ -276,9 +272,7 @@
                                 <input type="text" class="form-control" id="exam_name[]" name="exam_name[]" placeholder="NAME OF EXAM" >
                             </div>
                             <div class="col-lg-4">
-                                <input type="text" class="form-control" id="exam_year[]" name="exam_year[]"
-                                placeholder="YEAR OF EXAM" onfocus="(this.type='date')"
-                                onblur="if(!this.value) this.type='text';">
+                                <input type="text" class="form-control" id="exam_year[]" name="exam_year[]" placeholder="YEAR OF EXAM" >
                             </div>
                             <div class="col-lg-4">
                                 <input type="text" class="form-control" id="result[]" name="result[]" placeholder="RESULT">
@@ -289,9 +283,7 @@
                                 <input type="text" class="form-control" id="exam_name[]" name="exam_name[]" placeholder="NAME OF EXAM" >
                             </div>
                             <div class="col-lg-4">
-                                <input type="text" class="form-control" id="exam_year[]" name="exam_year[]"
-                                placeholder="YEAR OF EXAM" onfocus="(this.type='date')"
-                                onblur="if(!this.value) this.type='text';">
+                                <input type="text" class="form-control" id="exam_year[]" name="exam_year[]" placeholder="YEAR OF EXAM" >
                             </div>
                             <div class="col-lg-4">
                                 <input type="text" class="form-control" id="result[]" name="result[]" placeholder="RESULT">
@@ -446,11 +438,11 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="form-group mt-3">
-                        <label for="passport" class="mb-2 ml-2">YOUR IMAGE</label>
+                        <label for="image" class="mb-2 ml-2">YOUR IMAGE</label>
                         <div class="row">
                             <div class="col-lg-12">
                                 <input type="file" name="image" class="form-control"
-                                id="image" required>
+                                id="image" required accept=".jpg,.jpeg,.png">
 
                                 <img class="mt-3" src="" id="showPhoto">
                             </div>
@@ -462,16 +454,19 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="form-group mt-3">
-                        <label for="" class="mb-2 ml-2">PLEASE SUBMIT ALL REQUIRED DOCUMENTS, INCLUDING SSC AND HSC CERTIFICATES, MARK SHEETS, NID, AND PASSPORT</label>
+                        <label for="document" class="mb-2 ml-2">
+                            PLEASE SUBMIT ALL REQUIRED DOCUMENTS, INCLUDING SSC AND HSC CERTIFICATES, MARK SHEETS, NID, AND PASSPORT
+                        </label>
                         <div class="row">
                             <div class="col-lg-12">
-                                <input type="file" name="document" class="form-control"
-                                id="document" required>
+                                <input type="file" name="document" class="form-control" id="document"
+                                required accept=".pdf,.doc,.docx,.jpg,.jpeg,.png">
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+
 
             <div class="text-center mt-5"><button type="submit">SUBMIT APPLICATION</button></div>
           </form>
@@ -480,16 +475,17 @@
     </div>
   </section>
 
-  <script>
-    document.getElementById("passport").addEventListener("change", function() {
-        var passportDetails = document.getElementById("passportDetails");
-        if (this.value == "1") {
-            passportDetails.style.display = "flex";
-        } else {
-            passportDetails.style.display = "none";
-        }
-    });
-</script>
+
+<script>
+      document.getElementById("passport").addEventListener("change", function() {
+          var passportDetails = document.getElementById("passportDetails");
+          if (this.value == "1") {
+              passportDetails.style.display = "flex";
+          } else {
+              passportDetails.style.display = "none";
+          }
+      });
+  </script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 {{-- image preview js --}}
 <script type="text/javascript">
@@ -511,6 +507,14 @@
                 if (other !== this) other.checked = false;
             });
         });
+    });
+</script>
+<script>
+    // for notification alert auto remove 3sec
+    $(document).ready(function () {
+        setTimeout(function () {
+            $(".alert").fadeOut("slow");
+        }, 3000); // 3 seconds
     });
 </script>
 @endsection

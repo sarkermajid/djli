@@ -62,7 +62,7 @@
         $(document).ready(function () {
             setTimeout(function () {
                 $(".alert").fadeOut("slow");
-            }, 2000); // 3 seconds
+            }, 3000); // 3 seconds
         });
     </script>
 @endsection
