@@ -5,7 +5,8 @@
     <div class="container" style="margin-top: 80px;">
       <div class="row mt-5 justify-content-center" data-aos="fade-up">
         <div class="col-lg-12">
-            <form action="" method="post" role="form" class="form-design">
+            <form action="{{ route('submitForm') }}" method="post" role="form" class="form-design">
+            @csrf
             <div class="row">
                 <div style="text-align:center; padding-bottom:20px;">
                     <img src="{{ asset('frontend/assets/img/LOGO DJLI.png') }}" style="width:80px;" alt="">
@@ -168,7 +169,7 @@
                         <label for="passport" class="mb-2 ml-2">BACHELOR</label>
                         <div class="row">
                             <div class="col-lg-4">
-                                <input type="text" class="form-control" id="" name="p_sch_name" placeholder="NAME OF SCHOOL" required>
+                                <input type="text" class="form-control" id="" name="p_sch_name" placeholder="NAME OF SCHOOL">
                             </div>
                             <div class="col-lg-4">
                                 <input type="text" class="form-control" id="date_expiration" name="p_sch_graduation"
@@ -176,7 +177,7 @@
                                 onblur="if(!this.value) this.type='text';">
                             </div>
                             <div class="col-lg-4">
-                                <input type="text" class="form-control" id="p_location" name="p_location" placeholder="LOCATION" required>
+                                <input type="text" class="form-control" id="p_location" name="p_location" placeholder="LOCATION">
                             </div>
                         </div>
                     </div>
@@ -189,7 +190,7 @@
                         <label for="passport" class="mb-2 ml-2">MASTERS</label>
                         <div class="row">
                             <div class="col-lg-4">
-                                <input type="text" class="form-control" id="" name="p_sch_name" placeholder="NAME OF SCHOOL" required>
+                                <input type="text" class="form-control" id="" name="p_sch_name" placeholder="NAME OF SCHOOL">
                             </div>
                             <div class="col-lg-4">
                                 <input type="text" class="form-control" id="date_expiration" name="p_sch_graduation"
@@ -197,7 +198,7 @@
                                 onblur="if(!this.value) this.type='text';">
                             </div>
                             <div class="col-lg-4">
-                                <input type="text" class="form-control" id="p_location" name="p_location" placeholder="LOCATION" required>
+                                <input type="text" class="form-control" id="p_location" name="p_location" placeholder="LOCATION">
                             </div>
                         </div>
                     </div>
@@ -390,16 +391,16 @@
                         <label for="passport" class="mb-2 ml-2">FINANCIAL SUPPORTER</label>
                         <div class="row">
                             <div class="col-lg-3">
-                                <input type="text" class="form-control" id="supporter_name" name="supporter_name" placeholder="SUPPORTER NAME" required>
+                                <input type="text" class="form-control" id="supporter_name" name="supporter_name" placeholder="SUPPORTER NAME">
                             </div>
                             <div class="col-lg-3">
-                                <input type="text" class="form-control" id="phone" name="phone" placeholder="PHONE" required>
+                                <input type="text" class="form-control" id="phone" name="phone" placeholder="PHONE">
                             </div>
                             <div class="col-lg-3">
-                                <input type="text" class="form-control" id="supporter_address" name="supporter_address" placeholder="SUPPORTER ADDRESS" required>
+                                <input type="text" class="form-control" id="supporter_address" name="supporter_address" placeholder="SUPPORTER ADDRESS">
                             </div>
                             <div class="col-lg-3">
-                                <input type="text" class="form-control" id="company_name" name="company_name" placeholder="COMPANY NAME" required>
+                                <input type="text" class="form-control" id="company_name" name="company_name" placeholder="COMPANY NAME">
                             </div>
                         </div>
                     </div>
@@ -413,7 +414,7 @@
                         <div class="row">
                             <div class="col-lg-12">
                                 <input type="file" name="image" class="form-control"
-                                id="image">
+                                id="image" required>
 
                                 <img class="mt-3" src="" id="showPhoto">
                             </div>
@@ -421,17 +422,15 @@
                     </div>
                 </div>
             </div>
-            
+
             <div class="row">
                 <div class="col-lg-12">
                     <div class="form-group mt-3">
-                        <label for="passport" class="mb-2 ml-2">YOUR IMAGE</label>
+                        <label for="" class="mb-2 ml-2">PLEASE SUBMIT ALL REQUIRED DOCUMENTS, INCLUDING SSC AND HSC CERTIFICATES, MARK SHEETS, NID, AND PASSPORT</label>
                         <div class="row">
                             <div class="col-lg-12">
-                                <input type="file" name="image" class="form-control"
-                                id="image">
-
-                                <img class="mt-3" src="" id="showPhoto">
+                                <input type="file" name="document" class="form-control"
+                                id="document" required>
                             </div>
                         </div>
                     </div>
