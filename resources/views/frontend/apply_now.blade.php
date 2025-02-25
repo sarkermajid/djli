@@ -12,7 +12,25 @@
                     <img src="{{ asset('frontend/assets/img/LOGO DJLI.png') }}" style="width:80px;" alt="">
                 </div>
               <h3 class="text-center mb-5" style="color: #EA232A">DHAKA JAPANESE LANGUAGE INSTITUTE APPLICATION FORM</h3>
-
+                @if (session('success'))
+                    <div class="alert alert-success">
+                        {{ session('success') }}
+                    </div>
+                @endif
+                @if(session('warning'))
+                    <div class="alert alert-warning">
+                        {{ session('warning') }}
+                    </div>
+                @endif
+                @if ($errors->any())
+                    <div class="alert alert-danger">
+                        <ul>
+                            @foreach ($errors->all() as $error)
+                                <li>{{ $error }}</li>
+                            @endforeach
+                        </ul>
+                    </div>
+                @endif
               <div class="row">
                 <div class="col-md-6 form-group">
 
@@ -33,7 +51,7 @@
                             <option disabled selected> --- SELECT --- </option>
                             <option value="passport">PASSPORT</option>
                             <option value="nid">NID</option>
-                            <option value="birth_cer">BIRTH CERTIFICATE</option>
+                            <option value="birth_certificate">BIRTH CERTIFICATE</option>
                         </select>
                     </div>
                 </div>
@@ -127,15 +145,15 @@
                         <label for="passport" class="mb-2 ml-2">SSC</label>
                         <div class="row">
                             <div class="col-lg-4">
-                                <input type="text" class="form-control" id="" name="p_sch_name" placeholder="NAME OF SCHOOL" required>
+                                <input type="text" class="form-control" id="ssc_name" name="ssc_name" placeholder="NAME OF SCHOOL" required>
                             </div>
                             <div class="col-lg-4">
-                                <input type="text" class="form-control" id="date_expiration" name="p_sch_graduation"
+                                <input type="text" class="form-control" id="ssc_date_exp" name="ssc_date_exp"
                                 placeholder="DATE OF ENTRANCE/DATE OF GRADUATION" onfocus="(this.type='date')"
                                 onblur="if(!this.value) this.type='text';">
                             </div>
                             <div class="col-lg-4">
-                                <input type="text" class="form-control" id="p_location" name="p_location" placeholder="LOCATION" required>
+                                <input type="text" class="form-control" id="ssc_location" name="ssc_location" placeholder="LOCATION" required>
                             </div>
                         </div>
                     </div>
@@ -148,15 +166,15 @@
                         <label for="passport" class="mb-2 ml-2">HSC</label>
                         <div class="row">
                             <div class="col-lg-4">
-                                <input type="text" class="form-control" id="" name="p_sch_name" placeholder="NAME OF SCHOOL" required>
+                                <input type="text" class="form-control" id="hsc_name" name="hsc_name" placeholder="NAME OF SCHOOL" required>
                             </div>
                             <div class="col-lg-4">
-                                <input type="text" class="form-control" id="date_expiration" name="p_sch_graduation"
+                                <input type="text" class="form-control" id="hsc_date_exp" name="hsc_date_exp"
                                 placeholder="DATE OF ENTRANCE/DATE OF GRADUATION" onfocus="(this.type='date')"
                                 onblur="if(!this.value) this.type='text';">
                             </div>
                             <div class="col-lg-4">
-                                <input type="text" class="form-control" id="p_location" name="p_location" placeholder="LOCATION" required>
+                                <input type="text" class="form-control" id="hsc_location" name="hsc_location" placeholder="LOCATION" required>
                             </div>
                         </div>
                     </div>
@@ -169,15 +187,15 @@
                         <label for="passport" class="mb-2 ml-2">BACHELOR</label>
                         <div class="row">
                             <div class="col-lg-4">
-                                <input type="text" class="form-control" id="" name="p_sch_name" placeholder="NAME OF SCHOOL">
+                                <input type="text" class="form-control" id="bsc_name" name="bsc_name" placeholder="NAME OF SCHOOL">
                             </div>
                             <div class="col-lg-4">
-                                <input type="text" class="form-control" id="date_expiration" name="p_sch_graduation"
+                                <input type="text" class="form-control" id="bsc_date_exp" name="bsc_date_exp"
                                 placeholder="DATE OF ENTRANCE/DATE OF GRADUATION" onfocus="(this.type='date')"
                                 onblur="if(!this.value) this.type='text';">
                             </div>
                             <div class="col-lg-4">
-                                <input type="text" class="form-control" id="p_location" name="p_location" placeholder="LOCATION">
+                                <input type="text" class="form-control" id="bsc_location" name="bsc_location" placeholder="LOCATION">
                             </div>
                         </div>
                     </div>
@@ -190,15 +208,15 @@
                         <label for="passport" class="mb-2 ml-2">MASTERS</label>
                         <div class="row">
                             <div class="col-lg-4">
-                                <input type="text" class="form-control" id="" name="p_sch_name" placeholder="NAME OF SCHOOL">
+                                <input type="text" class="form-control" id="" name="msc_sch_name" placeholder="NAME OF SCHOOL">
                             </div>
                             <div class="col-lg-4">
-                                <input type="text" class="form-control" id="date_expiration" name="p_sch_graduation"
+                                <input type="text" class="form-control" id="msc_date_exp" name="msc_date_exp"
                                 placeholder="DATE OF ENTRANCE/DATE OF GRADUATION" onfocus="(this.type='date')"
                                 onblur="if(!this.value) this.type='text';">
                             </div>
                             <div class="col-lg-4">
-                                <input type="text" class="form-control" id="p_location" name="p_location" placeholder="LOCATION">
+                                <input type="text" class="form-control" id="msc_location" name="msc_location" placeholder="LOCATION">
                             </div>
                         </div>
                     </div>
@@ -208,57 +226,75 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="form-group mt-3">
-                        <label for="" class="mb-2 ml-2">JAPANESE LANGUAGE ABILITY</label>
+                        <div class="row">
+                            <div class="col-lg-3">
+                                <label for="" class="mb-2 ml-2">JAPANESE LANGUAGE ABILITY</label>
+                            </div>
+                            <div class="col-lg-9">
+                                <!-- Yes/No Checkbox option -->
+                                <div class="">
+                                    <label class="mb-2">DID YOU APPLY BEFORE?</label>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="checkbox" id="applied_yes" style="height: 20px;" name="applied_before" value="yes">
+                                        <label class="form-check-label" for="applied_yes">Yes</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="checkbox" id="applied_no" style="height: 20px;" name="applied_before" value="no">
+                                        <label class="form-check-label" for="applied_no">No</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                         <div class="row">
                             <div class="col-lg-4">
-                                <input type="text" class="form-control" id="" name="exam_name" placeholder="NAME OF EXAM" >
+                                <input type="text" class="form-control" id="exam_name[]" name="exam_name[]" placeholder="NAME OF EXAM" >
                             </div>
                             <div class="col-lg-4">
-                                <input type="text" class="form-control" id="exam_year" name="exam_year"
+                                <input type="text" class="form-control" id="exam_year[]" name="exam_year[]"
                                 placeholder="YEAR OF EXAM" onfocus="(this.type='date')"
                                 onblur="if(!this.value) this.type='text';">
                             </div>
                             <div class="col-lg-4">
-                                <input type="text" class="form-control" id="result" name="result" placeholder="RESULT">
+                                <input type="text" class="form-control" id="result[]" name="result[]" placeholder="RESULT">
                             </div>
                         </div>
                         <div class="row mt-3">
                             <div class="col-lg-4">
-                                <input type="text" class="form-control" id="" name="exam_name" placeholder="NAME OF EXAM" >
+                                <input type="text" class="form-control" id="exam_name[]" name="exam_name[]" placeholder="NAME OF EXAM" >
                             </div>
                             <div class="col-lg-4">
-                                <input type="text" class="form-control" id="exam_year" name="exam_year"
+                                <input type="text" class="form-control" id="exam_year[]" name="exam_year[]"
                                 placeholder="YEAR OF EXAM" onfocus="(this.type='date')"
                                 onblur="if(!this.value) this.type='text';">
                             </div>
                             <div class="col-lg-4">
-                                <input type="text" class="form-control" id="result" name="result" placeholder="RESULT">
+                                <input type="text" class="form-control" id="result[]" name="result[]" placeholder="RESULT">
                             </div>
                         </div>
                         <div class="row mt-3">
                             <div class="col-lg-4">
-                                <input type="text" class="form-control" id="" name="exam_name" placeholder="NAME OF EXAM" >
+                                <input type="text" class="form-control" id="exam_name[]" name="exam_name[]" placeholder="NAME OF EXAM" >
                             </div>
                             <div class="col-lg-4">
-                                <input type="text" class="form-control" id="exam_year" name="exam_year"
+                                <input type="text" class="form-control" id="exam_year[]" name="exam_year[]"
                                 placeholder="YEAR OF EXAM" onfocus="(this.type='date')"
                                 onblur="if(!this.value) this.type='text';">
                             </div>
                             <div class="col-lg-4">
-                                <input type="text" class="form-control" id="result" name="result" placeholder="RESULT">
+                                <input type="text" class="form-control" id="result[]" name="result[]" placeholder="RESULT">
                             </div>
                         </div>
                         <div class="row mt-3">
                             <div class="col-lg-4">
-                                <input type="text" class="form-control" id="" name="exam_name" placeholder="NAME OF EXAM" >
+                                <input type="text" class="form-control" id="exam_name[]" name="exam_name[]" placeholder="NAME OF EXAM" >
                             </div>
                             <div class="col-lg-4">
-                                <input type="text" class="form-control" id="exam_year" name="exam_year"
+                                <input type="text" class="form-control" id="exam_year[]" name="exam_year[]"
                                 placeholder="YEAR OF EXAM" onfocus="(this.type='date')"
                                 onblur="if(!this.value) this.type='text';">
                             </div>
                             <div class="col-lg-4">
-                                <input type="text" class="form-control" id="result" name="result" placeholder="RESULT">
+                                <input type="text" class="form-control" id="result[]" name="result[]" placeholder="RESULT">
                             </div>
                         </div>
                     </div>
@@ -271,114 +307,114 @@
                         <label for="" class="mb-2 ml-2">FAMILY INFORMATION</label>
                         <div class="row">
                             <div class="col-lg-3">
-                                <input type="text" class="form-control" id="" name="name" placeholder="NAME" >
+                                <input type="text" class="form-control" id="fm_name[]" name="fm_name[]" placeholder="NAME" >
                             </div>
                             <div class="col-lg-3">
-                                <input type="text" class="form-control" id="" name="relationship" placeholder="RELATIONSHIP" >
+                                <input type="text" class="form-control" id="relationship" name="relationship[]" placeholder="RELATIONSHIP" >
                             </div>
                             <div class="col-lg-3">
-                                <input type="text" class="form-control" id="dob" name="dob"
+                                <input type="text" class="form-control" id="fm_dob[]" name="fm_dob[]"
                                 placeholder="DATE OF BIRTH" onfocus="(this.type='date')"
                                 onblur="if(!this.value) this.type='text';">
                             </div>
                             <div class="col-lg-3">
-                                <input type="text" class="form-control" id="occupation" name="occupation" placeholder="OCCUPATION">
+                                <input type="text" class="form-control" id="occupation[]" name="occupation[]" placeholder="OCCUPATION">
                             </div>
                         </div>
                         <div class="row mt-3">
                             <div class="col-lg-3">
-                                <input type="text" class="form-control" id="" name="name" placeholder="NAME" >
+                                <input type="text" class="form-control" id="fm_name[]" name="fm_name[]" placeholder="NAME" >
                             </div>
                             <div class="col-lg-3">
-                                <input type="text" class="form-control" id="" name="relationship" placeholder="RELATIONSHIP" >
+                                <input type="text" class="form-control" id="relationship" name="relationship[]" placeholder="RELATIONSHIP" >
                             </div>
                             <div class="col-lg-3">
-                                <input type="text" class="form-control" id="dob" name="dob"
+                                <input type="text" class="form-control" id="fm_dob[]" name="fm_dob[]"
                                 placeholder="DATE OF BIRTH" onfocus="(this.type='date')"
                                 onblur="if(!this.value) this.type='text';">
                             </div>
                             <div class="col-lg-3">
-                                <input type="text" class="form-control" id="occupation" name="occupation" placeholder="OCCUPATION">
+                                <input type="text" class="form-control" id="occupation[]" name="occupation[]" placeholder="OCCUPATION">
                             </div>
                         </div>
                         <div class="row mt-3">
                             <div class="col-lg-3">
-                                <input type="text" class="form-control" id="" name="name" placeholder="NAME" >
+                                <input type="text" class="form-control" id="fm_name[]" name="fm_name[]" placeholder="NAME" >
                             </div>
                             <div class="col-lg-3">
-                                <input type="text" class="form-control" id="" name="relationship" placeholder="RELATIONSHIP" >
+                                <input type="text" class="form-control" id="relationship" name="relationship[]" placeholder="RELATIONSHIP" >
                             </div>
                             <div class="col-lg-3">
-                                <input type="text" class="form-control" id="dob" name="dob"
+                                <input type="text" class="form-control" id="fm_dob[]" name="fm_dob[]"
                                 placeholder="DATE OF BIRTH" onfocus="(this.type='date')"
                                 onblur="if(!this.value) this.type='text';">
                             </div>
                             <div class="col-lg-3">
-                                <input type="text" class="form-control" id="occupation" name="occupation" placeholder="OCCUPATION">
+                                <input type="text" class="form-control" id="occupation[]" name="occupation[]" placeholder="OCCUPATION">
                             </div>
                         </div>
                         <div class="row mt-3">
                             <div class="col-lg-3">
-                                <input type="text" class="form-control" id="" name="name" placeholder="NAME" >
+                                <input type="text" class="form-control" id="fm_name[]" name="fm_name[]" placeholder="NAME" >
                             </div>
                             <div class="col-lg-3">
-                                <input type="text" class="form-control" id="" name="relationship" placeholder="RELATIONSHIP" >
+                                <input type="text" class="form-control" id="relationship" name="relationship[]" placeholder="RELATIONSHIP" >
                             </div>
                             <div class="col-lg-3">
-                                <input type="text" class="form-control" id="dob" name="dob"
+                                <input type="text" class="form-control" id="fm_dob[]" name="fm_dob[]"
                                 placeholder="DATE OF BIRTH" onfocus="(this.type='date')"
                                 onblur="if(!this.value) this.type='text';">
                             </div>
                             <div class="col-lg-3">
-                                <input type="text" class="form-control" id="occupation" name="occupation" placeholder="OCCUPATION">
+                                <input type="text" class="form-control" id="occupation[]" name="occupation[]" placeholder="OCCUPATION">
                             </div>
                         </div>
                         <div class="row mt-3">
                             <div class="col-lg-3">
-                                <input type="text" class="form-control" id="" name="name" placeholder="NAME" >
+                                <input type="text" class="form-control" id="fm_name[]" name="fm_name[]" placeholder="NAME" >
                             </div>
                             <div class="col-lg-3">
-                                <input type="text" class="form-control" id="" name="relationship" placeholder="RELATIONSHIP" >
+                                <input type="text" class="form-control" id="relationship" name="relationship[]" placeholder="RELATIONSHIP" >
                             </div>
                             <div class="col-lg-3">
-                                <input type="text" class="form-control" id="dob" name="dob"
+                                <input type="text" class="form-control" id="fm_dob[]" name="fm_dob[]"
                                 placeholder="DATE OF BIRTH" onfocus="(this.type='date')"
                                 onblur="if(!this.value) this.type='text';">
                             </div>
                             <div class="col-lg-3">
-                                <input type="text" class="form-control" id="occupation" name="occupation" placeholder="OCCUPATION">
+                                <input type="text" class="form-control" id="occupation[]" name="occupation[]" placeholder="OCCUPATION">
                             </div>
                         </div>
                         <div class="row mt-3">
                             <div class="col-lg-3">
-                                <input type="text" class="form-control" id="" name="name" placeholder="NAME" >
+                                <input type="text" class="form-control" id="fm_name[]" name="fm_name[]" placeholder="NAME" >
                             </div>
                             <div class="col-lg-3">
-                                <input type="text" class="form-control" id="" name="relationship" placeholder="RELATIONSHIP" >
+                                <input type="text" class="form-control" id="relationship" name="relationship[]" placeholder="RELATIONSHIP" >
                             </div>
                             <div class="col-lg-3">
-                                <input type="text" class="form-control" id="dob" name="dob"
+                                <input type="text" class="form-control" id="fm_dob[]" name="fm_dob[]"
                                 placeholder="DATE OF BIRTH" onfocus="(this.type='date')"
                                 onblur="if(!this.value) this.type='text';">
                             </div>
                             <div class="col-lg-3">
-                                <input type="text" class="form-control" id="occupation" name="occupation" placeholder="OCCUPATION">
+                                <input type="text" class="form-control" id="occupation[]" name="occupation[]" placeholder="OCCUPATION">
                             </div>
                         </div>
                         <div class="row mt-3">
                             <div class="col-lg-3">
-                                <input type="text" class="form-control" id="" name="name" placeholder="NAME" >
+                                <input type="text" class="form-control" id="fm_name[]" name="fm_name[]" placeholder="NAME" >
                             </div>
                             <div class="col-lg-3">
-                                <input type="text" class="form-control" id="" name="relationship" placeholder="RELATIONSHIP" >
+                                <input type="text" class="form-control" id="relationship" name="relationship[]" placeholder="RELATIONSHIP" >
                             </div>
                             <div class="col-lg-3">
-                                <input type="text" class="form-control" id="dob" name="dob"
+                                <input type="text" class="form-control" id="fm_dob[]" name="fm_dob[]"
                                 placeholder="DATE OF BIRTH" onfocus="(this.type='date')"
                                 onblur="if(!this.value) this.type='text';">
                             </div>
                             <div class="col-lg-3">
-                                <input type="text" class="form-control" id="occupation" name="occupation" placeholder="OCCUPATION">
+                                <input type="text" class="form-control" id="occupation[]" name="occupation[]" placeholder="OCCUPATION">
                             </div>
                         </div>
                     </div>
@@ -391,13 +427,13 @@
                         <label for="passport" class="mb-2 ml-2">FINANCIAL SUPPORTER</label>
                         <div class="row">
                             <div class="col-lg-3">
-                                <input type="text" class="form-control" id="supporter_name" name="supporter_name" placeholder="SUPPORTER NAME">
+                                <input type="text" class="form-control" id="s_name" name="s_name" placeholder="SUPPORTER NAME">
                             </div>
                             <div class="col-lg-3">
-                                <input type="text" class="form-control" id="phone" name="phone" placeholder="PHONE">
+                                <input type="text" class="form-control" id="s_phone" name="s_phone" placeholder="PHONE">
                             </div>
                             <div class="col-lg-3">
-                                <input type="text" class="form-control" id="supporter_address" name="supporter_address" placeholder="SUPPORTER ADDRESS">
+                                <input type="text" class="form-control" id="s_address" name="s_address" placeholder="SUPPORTER ADDRESS">
                             </div>
                             <div class="col-lg-3">
                                 <input type="text" class="form-control" id="company_name" name="company_name" placeholder="COMPANY NAME">
@@ -440,9 +476,7 @@
             <div class="text-center mt-5"><button type="submit">SUBMIT APPLICATION</button></div>
           </form>
         </div>
-
       </div>
-
     </div>
   </section>
 
@@ -466,6 +500,16 @@
                 $('#showPhoto').attr('src', e.target.result).width(300).height(300);
             }
             reader.readAsDataURL(e.target.files['0']);
+        });
+    });
+</script>
+<script>
+    // Ensure only one checkbox is selected at a time
+    document.querySelectorAll('input[name="applied_before"]').forEach((checkbox) => {
+        checkbox.addEventListener('change', function() {
+            document.querySelectorAll('input[name="applied_before"]').forEach((other) => {
+                if (other !== this) other.checked = false;
+            });
         });
     });
 </script>
