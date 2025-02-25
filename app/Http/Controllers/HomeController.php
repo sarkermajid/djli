@@ -62,6 +62,11 @@ class HomeController extends Controller
         return view('frontend.book_now');
     }
 
+    public function submitForm(Request $request)
+    {
+        dd($request->all());
+    }
+
     public function submitBook(Request $request)
     {
         $bookNow = new BookNow();

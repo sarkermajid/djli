@@ -29,6 +29,7 @@ Route::get('/services', [HomeController::class, 'services'])->name('services');
 Route::get('/gallery', [HomeController::class, 'gallery'])->name('gallery');
 Route::get('/contact', [HomeController::class, 'contact'])->name('contact');
 Route::get('/apply-now', [HomeController::class, 'applyNow'])->name('applyNow');
+Route::post('/submit-form', [HomeController::class, 'submitForm'])->name('submitForm');
 Route::get('/book-now', [HomeController::class, 'bookNow'])->name('bookNow');
 Route::post('/submit-book-now', [HomeController::class, 'submitBook'])->name('submitBook');
 Route::get('djli-admin/login',[HomeController::class, 'djliLogin'])->name('djliLogin');

@@ -5,12 +5,13 @@
     <div class="container" style="margin-top: 80px;">
       <div class="row mt-5 justify-content-center" data-aos="fade-up">
         <div class="col-lg-12">
-            <form action="forms/contact.php" method="post" role="form" class="form-design">
+            <form action="" method="post" role="form" class="form-design">
             <div class="row">
                 <div style="text-align:center; padding-bottom:20px;">
                     <img src="{{ asset('frontend/assets/img/LOGO DJLI.png') }}" style="width:80px;" alt="">
                 </div>
               <h3 class="text-center mb-5" style="color: #EA232A">DHAKA JAPANESE LANGUAGE INSTITUTE APPLICATION FORM</h3>
+
               <div class="row">
                 <div class="col-md-6 form-group">
 
@@ -36,10 +37,12 @@
                     </div>
                 </div>
               </div>
+
               <div class="col-md-12 form-group">
                 <input type="text" name="name" class="form-control" id="name" placeholder="NAME" required>
               </div>
             </div>
+
             <div class="row">
                 <div class="col-md-6 form-group mt-3">
                     <input type="email" class="form-control" name="email" id="email" placeholder="EMAIL" required>
@@ -48,6 +51,7 @@
                     <input type="text" class="form-control" name="phone" id="phone" placeholder="PHONE" required>
                 </div>
             </div>
+
             <div class="row">
                 <div class="col-md-12 form-group mt-3">
                     <input type="text" class="form-control" id="dob" name="dob"
@@ -55,6 +59,7 @@
                     onblur="if(!this.value) this.type='text';">
                 </div>
             </div>
+
             <div class="row">
                 <div class="col-md-6 form-group mt-3">
                     <input type="text" class="form-control" name="present_address" id="present_address" placeholder="PRESENT ADDRESS" required>
@@ -63,6 +68,7 @@
                     <input type="text" class="form-control" name="permanent_address" id="permanent_address" placeholder="PERMANENT ADDRESS" required>
                 </div>
             </div>
+
             <div class="form-group mt-3">
               <input type="text" class="form-control" name="upn" id="upn" placeholder="UNION PORISHAD NAME" required>
             </div>
@@ -198,6 +204,240 @@
                 </div>
             </div>
 
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="form-group mt-3">
+                        <label for="" class="mb-2 ml-2">JAPANESE LANGUAGE ABILITY</label>
+                        <div class="row">
+                            <div class="col-lg-4">
+                                <input type="text" class="form-control" id="" name="exam_name" placeholder="NAME OF EXAM" >
+                            </div>
+                            <div class="col-lg-4">
+                                <input type="text" class="form-control" id="exam_year" name="exam_year"
+                                placeholder="YEAR OF EXAM" onfocus="(this.type='date')"
+                                onblur="if(!this.value) this.type='text';">
+                            </div>
+                            <div class="col-lg-4">
+                                <input type="text" class="form-control" id="result" name="result" placeholder="RESULT">
+                            </div>
+                        </div>
+                        <div class="row mt-3">
+                            <div class="col-lg-4">
+                                <input type="text" class="form-control" id="" name="exam_name" placeholder="NAME OF EXAM" >
+                            </div>
+                            <div class="col-lg-4">
+                                <input type="text" class="form-control" id="exam_year" name="exam_year"
+                                placeholder="YEAR OF EXAM" onfocus="(this.type='date')"
+                                onblur="if(!this.value) this.type='text';">
+                            </div>
+                            <div class="col-lg-4">
+                                <input type="text" class="form-control" id="result" name="result" placeholder="RESULT">
+                            </div>
+                        </div>
+                        <div class="row mt-3">
+                            <div class="col-lg-4">
+                                <input type="text" class="form-control" id="" name="exam_name" placeholder="NAME OF EXAM" >
+                            </div>
+                            <div class="col-lg-4">
+                                <input type="text" class="form-control" id="exam_year" name="exam_year"
+                                placeholder="YEAR OF EXAM" onfocus="(this.type='date')"
+                                onblur="if(!this.value) this.type='text';">
+                            </div>
+                            <div class="col-lg-4">
+                                <input type="text" class="form-control" id="result" name="result" placeholder="RESULT">
+                            </div>
+                        </div>
+                        <div class="row mt-3">
+                            <div class="col-lg-4">
+                                <input type="text" class="form-control" id="" name="exam_name" placeholder="NAME OF EXAM" >
+                            </div>
+                            <div class="col-lg-4">
+                                <input type="text" class="form-control" id="exam_year" name="exam_year"
+                                placeholder="YEAR OF EXAM" onfocus="(this.type='date')"
+                                onblur="if(!this.value) this.type='text';">
+                            </div>
+                            <div class="col-lg-4">
+                                <input type="text" class="form-control" id="result" name="result" placeholder="RESULT">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="form-group mt-3">
+                        <label for="" class="mb-2 ml-2">FAMILY INFORMATION</label>
+                        <div class="row">
+                            <div class="col-lg-3">
+                                <input type="text" class="form-control" id="" name="name" placeholder="NAME" >
+                            </div>
+                            <div class="col-lg-3">
+                                <input type="text" class="form-control" id="" name="relationship" placeholder="RELATIONSHIP" >
+                            </div>
+                            <div class="col-lg-3">
+                                <input type="text" class="form-control" id="dob" name="dob"
+                                placeholder="DATE OF BIRTH" onfocus="(this.type='date')"
+                                onblur="if(!this.value) this.type='text';">
+                            </div>
+                            <div class="col-lg-3">
+                                <input type="text" class="form-control" id="occupation" name="occupation" placeholder="OCCUPATION">
+                            </div>
+                        </div>
+                        <div class="row mt-3">
+                            <div class="col-lg-3">
+                                <input type="text" class="form-control" id="" name="name" placeholder="NAME" >
+                            </div>
+                            <div class="col-lg-3">
+                                <input type="text" class="form-control" id="" name="relationship" placeholder="RELATIONSHIP" >
+                            </div>
+                            <div class="col-lg-3">
+                                <input type="text" class="form-control" id="dob" name="dob"
+                                placeholder="DATE OF BIRTH" onfocus="(this.type='date')"
+                                onblur="if(!this.value) this.type='text';">
+                            </div>
+                            <div class="col-lg-3">
+                                <input type="text" class="form-control" id="occupation" name="occupation" placeholder="OCCUPATION">
+                            </div>
+                        </div>
+                        <div class="row mt-3">
+                            <div class="col-lg-3">
+                                <input type="text" class="form-control" id="" name="name" placeholder="NAME" >
+                            </div>
+                            <div class="col-lg-3">
+                                <input type="text" class="form-control" id="" name="relationship" placeholder="RELATIONSHIP" >
+                            </div>
+                            <div class="col-lg-3">
+                                <input type="text" class="form-control" id="dob" name="dob"
+                                placeholder="DATE OF BIRTH" onfocus="(this.type='date')"
+                                onblur="if(!this.value) this.type='text';">
+                            </div>
+                            <div class="col-lg-3">
+                                <input type="text" class="form-control" id="occupation" name="occupation" placeholder="OCCUPATION">
+                            </div>
+                        </div>
+                        <div class="row mt-3">
+                            <div class="col-lg-3">
+                                <input type="text" class="form-control" id="" name="name" placeholder="NAME" >
+                            </div>
+                            <div class="col-lg-3">
+                                <input type="text" class="form-control" id="" name="relationship" placeholder="RELATIONSHIP" >
+                            </div>
+                            <div class="col-lg-3">
+                                <input type="text" class="form-control" id="dob" name="dob"
+                                placeholder="DATE OF BIRTH" onfocus="(this.type='date')"
+                                onblur="if(!this.value) this.type='text';">
+                            </div>
+                            <div class="col-lg-3">
+                                <input type="text" class="form-control" id="occupation" name="occupation" placeholder="OCCUPATION">
+                            </div>
+                        </div>
+                        <div class="row mt-3">
+                            <div class="col-lg-3">
+                                <input type="text" class="form-control" id="" name="name" placeholder="NAME" >
+                            </div>
+                            <div class="col-lg-3">
+                                <input type="text" class="form-control" id="" name="relationship" placeholder="RELATIONSHIP" >
+                            </div>
+                            <div class="col-lg-3">
+                                <input type="text" class="form-control" id="dob" name="dob"
+                                placeholder="DATE OF BIRTH" onfocus="(this.type='date')"
+                                onblur="if(!this.value) this.type='text';">
+                            </div>
+                            <div class="col-lg-3">
+                                <input type="text" class="form-control" id="occupation" name="occupation" placeholder="OCCUPATION">
+                            </div>
+                        </div>
+                        <div class="row mt-3">
+                            <div class="col-lg-3">
+                                <input type="text" class="form-control" id="" name="name" placeholder="NAME" >
+                            </div>
+                            <div class="col-lg-3">
+                                <input type="text" class="form-control" id="" name="relationship" placeholder="RELATIONSHIP" >
+                            </div>
+                            <div class="col-lg-3">
+                                <input type="text" class="form-control" id="dob" name="dob"
+                                placeholder="DATE OF BIRTH" onfocus="(this.type='date')"
+                                onblur="if(!this.value) this.type='text';">
+                            </div>
+                            <div class="col-lg-3">
+                                <input type="text" class="form-control" id="occupation" name="occupation" placeholder="OCCUPATION">
+                            </div>
+                        </div>
+                        <div class="row mt-3">
+                            <div class="col-lg-3">
+                                <input type="text" class="form-control" id="" name="name" placeholder="NAME" >
+                            </div>
+                            <div class="col-lg-3">
+                                <input type="text" class="form-control" id="" name="relationship" placeholder="RELATIONSHIP" >
+                            </div>
+                            <div class="col-lg-3">
+                                <input type="text" class="form-control" id="dob" name="dob"
+                                placeholder="DATE OF BIRTH" onfocus="(this.type='date')"
+                                onblur="if(!this.value) this.type='text';">
+                            </div>
+                            <div class="col-lg-3">
+                                <input type="text" class="form-control" id="occupation" name="occupation" placeholder="OCCUPATION">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="form-group mt-3">
+                        <label for="passport" class="mb-2 ml-2">FINANCIAL SUPPORTER</label>
+                        <div class="row">
+                            <div class="col-lg-3">
+                                <input type="text" class="form-control" id="supporter_name" name="supporter_name" placeholder="SUPPORTER NAME" required>
+                            </div>
+                            <div class="col-lg-3">
+                                <input type="text" class="form-control" id="phone" name="phone" placeholder="PHONE" required>
+                            </div>
+                            <div class="col-lg-3">
+                                <input type="text" class="form-control" id="supporter_address" name="supporter_address" placeholder="SUPPORTER ADDRESS" required>
+                            </div>
+                            <div class="col-lg-3">
+                                <input type="text" class="form-control" id="company_name" name="company_name" placeholder="COMPANY NAME" required>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="form-group mt-3">
+                        <label for="passport" class="mb-2 ml-2">YOUR IMAGE</label>
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <input type="file" name="image" class="form-control"
+                                id="image">
+
+                                <img class="mt-3" src="" id="showPhoto">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="form-group mt-3">
+                        <label for="passport" class="mb-2 ml-2">YOUR IMAGE</label>
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <input type="file" name="image" class="form-control"
+                                id="image">
+
+                                <img class="mt-3" src="" id="showPhoto">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
             <div class="text-center mt-5"><button type="submit">SUBMIT APPLICATION</button></div>
           </form>
         </div>
@@ -215,6 +455,19 @@
         } else {
             passportDetails.style.display = "none";
         }
+    });
+</script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+{{-- image preview js --}}
+<script type="text/javascript">
+    $(document).ready(function() {
+        $('#image').change(function(e) {
+            var reader = new FileReader();
+            reader.onload = function(e) {
+                $('#showPhoto').attr('src', e.target.result).width(300).height(300);
+            }
+            reader.readAsDataURL(e.target.files['0']);
+        });
     });
 </script>
 @endsection
