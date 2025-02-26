@@ -10,8 +10,8 @@ class TeamMemberController extends Controller
 {
     public function index()
     {
-        $teamMembers = TeamMember::all();
-        return view('admin.team.all-team-members',compact('teamMembers'));
+        $teamMembers = TeamMember::orderBy('id', 'desc')->get();
+        return view('admin.team.all-team-members', compact('teamMembers'));
     }
     public function teamMemberAdd()
     {

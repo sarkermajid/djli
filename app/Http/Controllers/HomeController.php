@@ -30,7 +30,7 @@ class HomeController extends Controller
 
     public function about()
     {
-        $teamMembers = TeamMember::all();
+        $teamMembers = TeamMember::orderBy('id', 'desc')->get();
         return view('frontend.about',compact('teamMembers'));
     }
 
