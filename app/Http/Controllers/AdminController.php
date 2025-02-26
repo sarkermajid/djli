@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\ApplicationForm;
 use App\Models\DailyExpense;
 use App\Models\DailyMarket;
 use App\Models\DailySell;
@@ -15,8 +16,8 @@ class AdminController extends Controller
 {
     public function AdminDashboard()
     {
-
-        return view('admin.index');
+        $submittedForm = ApplicationForm::count();
+        return view('admin.index',compact('submittedForm'));
     }
 
     public function AdminLogout(Request $request)

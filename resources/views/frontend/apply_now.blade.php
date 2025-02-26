@@ -49,9 +49,9 @@
                         <label for="as_per" class="mb-1">AS PER</label>
                         <select class="form-select" name="as_per" id="as_per">
                             <option disabled selected> --- SELECT --- </option>
-                            <option value="passport">PASSPORT</option>
-                            <option value="nid">NID</option>
-                            <option value="birth_certificate">BIRTH CERTIFICATE</option>
+                            <option value="Passport">PASSPORT</option>
+                            <option value="Nid">NID</option>
+                            <option value="Birth_Certificate">BIRTH CERTIFICATE</option>
                         </select>
                     </div>
                 </div>

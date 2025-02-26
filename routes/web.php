@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\ApplicationFormController;
 use App\Http\Controllers\BranchController;
 use App\Http\Controllers\ConsultancyBookController;
 use App\Http\Controllers\GalleryController;
@@ -68,6 +69,12 @@ Route::middleware('auth')->group(function () {
         Route::get('admin/gallery-image/add', 'galleryImageAdd')->name('gallery.image.add');
         Route::post('admin/gallery-image/store', 'galleryImageStore')->name('gallery.image.store');
         Route::get('admin/gallery-image/delete/{id}', 'galleryImageDelete')->name('gallery.image.delete');
+    });
+
+    Route::controller(ApplicationFormController::class)->group(function(){
+        Route::get('admin/application-form', 'index')->name('application.form.all');
+        Route::get('admin/application-form/view/{id}', 'applicationView')->name('application.form.view');
+        Route::get('admin/application-form/delete/{id}', 'applicationDelete')->name('application.form.delete');
     });
 
 });

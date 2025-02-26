@@ -20,10 +20,10 @@
                 <div class="card rounded">
                     <div class="card-body">
                         <div class="mt-1">
-                            <h3 class="text-center fw-bolder mb-0 text-uppercase">Total Form Submitted</h3>
+                            <h3 class="text-center fw-bolder mb-0 text-uppercase">Total Submitted Forms</h3>
                         </div>
                         <div class="mt-2">
-                            <h2 class="text-center fw-bolder mb-0 text-uppercase"></h2>
+                            <h2 class="text-center fw-bolder mb-0 text-uppercase">({{ $submittedForm }})</h2>
                         </div>
                     </div>
                 </div>
