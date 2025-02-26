@@ -144,7 +144,7 @@
                             </tr>
                             <tr>
                                 <td class="payment-title"><strong>Document:</strong></td>
-                                <td colspan="3">
+                                <td colspan="2">
                                     <object data="{{ asset($applicationForm->document) }}" type="application/pdf" width="100%" height="500px">
                                         <p>Your browser does not support PDFs. <a href="{{ asset($applicationForm->document) }}" target="_blank">Download it here</a>.</p>
                                     </object>
