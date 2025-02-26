@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
 use App\Models\ApplicationForm;
+use App\Models\FamilyMember;
+use App\Models\JapaneseExam;
 use Illuminate\Http\Request;
 
 class ApplicationFormController extends Controller
@@ -17,6 +19,8 @@ class ApplicationFormController extends Controller
     public function applicationView($id)
     {
         $applicationForm = ApplicationForm::find($id);
-        return view('admin.application-form.view-application-form',compact('applicationForm'));
+        $japaneseExams = JapaneseExam::where('application_id',$applicationForm->id)->get();
+        $familyMembers = FamilyMember::where('application_id',$applicationForm->id)->get();
+        return view('admin.application-form.view-application-form',compact('applicationForm','japaneseExams','familyMembers'));
     }
 }
