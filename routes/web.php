@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\ApplicationFormController;
+use App\Http\Controllers\ApplicationFormExportController;
 use App\Http\Controllers\BranchController;
 use App\Http\Controllers\ConsultancyBookController;
 use App\Http\Controllers\GalleryController;
@@ -76,6 +77,8 @@ Route::middleware('auth')->group(function () {
         Route::get('admin/application-form/view/{id}', 'applicationView')->name('application.form.view');
         Route::get('admin/application-form/delete/{id}', 'applicationDelete')->name('application.form.delete');
     });
+
+    Route::get('/export-application-form', [ApplicationFormExportController::class, 'export'])->name('export.application.form');
 
 });
 

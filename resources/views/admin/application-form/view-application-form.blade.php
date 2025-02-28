@@ -12,6 +12,7 @@
         <div class="col-md-12">
             <div class="card">
                 <div class="card-body py-5">
+                    <a href="{{ route('export.application.form') }}" class="btn btn-inverse-success mt-3 mb-3">Export to Excel</a>
                     <table class="table table-bordered">
                         <tbody>
                             <tr>
@@ -19,7 +20,7 @@
                                 <td>
                                     <img src="{{ asset($applicationForm->image) }}" alt="User Image" style="height: 100px; width:100px;">
                                     <br>
-                                    <a href="{{ asset($applicationForm->image) }}" download class="btn btn-primary" style="display: inline-block; margin-top: 10px;">
+                                    <a href="{{ asset($applicationForm->image) }}" download class="btn btn-inverse-warning" style="display: inline-block; margin-top: 10px;">
                                         Download Image
                                     </a>
                                 </td>
