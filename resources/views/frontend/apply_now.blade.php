@@ -58,16 +58,16 @@
               </div>
 
               <div class="col-md-12 form-group">
-                <input type="text" name="name" class="form-control" id="name" placeholder="NAME" required>
+                <input type="text" name="name" value="{{ old('name') }}" class="form-control" id="name" placeholder="NAME" required>
               </div>
             </div>
 
             <div class="row">
                 <div class="col-md-6 form-group mt-3">
-                    <input type="email" class="form-control" name="email" id="email" placeholder="EMAIL" required>
+                    <input type="email" class="form-control" name="email" value="{{ old('email') }}" id="email" placeholder="EMAIL" required>
                 </div>
                 <div class="col-md-6 form-group mt-3">
-                    <input type="text" class="form-control" name="phone" id="phone" placeholder="PHONE" required>
+                    <input type="text" class="form-control" name="phone" value="{{ old('phone') }}" id="phone" placeholder="PHONE" required>
                 </div>
             </div>
 
@@ -81,22 +81,22 @@
 
             <div class="row">
                 <div class="col-md-6 form-group mt-3">
-                    <input type="text" class="form-control" name="present_address" id="present_address" placeholder="PRESENT ADDRESS" required>
+                    <input type="text" class="form-control" value="{{ old('present_address') }}" name="present_address" id="present_address" placeholder="PRESENT ADDRESS" required>
                 </div>
                 <div class="col-md-6 form-group mt-3">
-                    <input type="text" class="form-control" name="permanent_address" id="permanent_address" placeholder="PERMANENT ADDRESS" required>
+                    <input type="text" class="form-control" value="{{ old('permanent_address') }}" name="permanent_address" id="permanent_address" placeholder="PERMANENT ADDRESS" required>
                 </div>
             </div>
 
             <div class="form-group mt-3">
-              <input type="text" class="form-control" name="upn" id="upn" placeholder="UNION PORISHAD NAME" required>
+              <input type="text" class="form-control" name="upn" id="upn" value="{{ old('upn') }}" placeholder="UNION PORISHAD NAME" required>
             </div>
 
             <div class="row">
                 <div class="col-lg-12">
                     <div class="form-group mt-3">
                         <label for="passport" class="mb-2 ml-2">PASSPORT</label>
-                        <select class="form-select" id="passport" aria-label="Default select example">
+                        <select class="form-select" value="{{ old('passport') }}" id="passport" aria-label="Default select example">
                             <option disabled selected> --- SELECT --- </option>
                             <option value="1">YES</option>
                             <option value="0">NO</option>
@@ -107,12 +107,12 @@
 
             <div class="row" id="passportDetails" style="display: none;">
                 <div class="col-md-6 form-group mt-3">
-                    <input type="text" class="form-control" id="date_issue" name="date_issue"
+                    <input type="text" class="form-control" id="date_issue" value="{{ old('date_issue') }}" name="date_issue"
                         placeholder="DATE OF ISSUE" onfocus="(this.type='date')"
                         onblur="if(!this.value) this.type='text';">
                 </div>
                 <div class="col-md-6 form-group mt-3">
-                    <input type="text" class="form-control" id="date_expiration" name="date_expiration"
+                    <input type="text" class="form-control" id="date_expiration" value="{{ old('date_expiration') }}" name="date_expiration"
                         placeholder="DATE OF EXPIRATION" onfocus="(this.type='date')"
                         onblur="if(!this.value) this.type='text';">
                 </div>
@@ -124,15 +124,15 @@
                         <label for="passport" class="mb-2 ml-2">PRIMARY</label>
                         <div class="row">
                             <div class="col-lg-4">
-                                <input type="text" class="form-control" id="" name="p_sch_name" placeholder="NAME OF SCHOOL" required>
+                                <input type="text" class="form-control" id="p_sch_name"  value="{{ old('p_sch_name') }}" name="p_sch_name" placeholder="NAME OF SCHOOL" required>
                             </div>
                             <div class="col-lg-4">
-                                <input type="text" class="form-control" id="date_expiration" name="p_sch_graduation"
+                                <input type="text" class="form-control" id="date_expiration" value="{{ old('p_sch_graduation') }}" name="p_sch_graduation"
                                 placeholder="DATE OF ENTRANCE/DATE OF GRADUATION" onfocus="(this.type='date')"
                                 onblur="if(!this.value) this.type='text';">
                             </div>
                             <div class="col-lg-4">
-                                <input type="text" class="form-control" id="p_location" name="p_location" placeholder="LOCATION" required>
+                                <input type="text" class="form-control" id="p_location" name="p_location" value="{{ old('p_location') }}" placeholder="LOCATION" required>
                             </div>
                         </div>
                     </div>
@@ -145,15 +145,15 @@
                         <label for="passport" class="mb-2 ml-2">SSC</label>
                         <div class="row">
                             <div class="col-lg-4">
-                                <input type="text" class="form-control" id="ssc_name" name="ssc_name" placeholder="NAME OF SCHOOL" required>
+                                <input type="text" class="form-control" id="ssc_name" value="{{ old('ssc_name') }}" name="ssc_name" placeholder="NAME OF SCHOOL" required>
                             </div>
                             <div class="col-lg-4">
-                                <input type="text" class="form-control" id="ssc_date_exp" name="ssc_date_exp"
+                                <input type="text" class="form-control" id="ssc_date_exp" value="{{ old('ssc_date_exp') }}" name="ssc_date_exp"
                                 placeholder="DATE OF ENTRANCE/DATE OF GRADUATION" onfocus="(this.type='date')"
                                 onblur="if(!this.value) this.type='text';">
                             </div>
                             <div class="col-lg-4">
-                                <input type="text" class="form-control" id="ssc_location" name="ssc_location" placeholder="LOCATION" required>
+                                <input type="text" class="form-control" id="ssc_location" value="{{ old('ssc_location') }}" name="ssc_location" placeholder="LOCATION" required>
                             </div>
                         </div>
                     </div>
@@ -166,15 +166,15 @@
                         <label for="passport" class="mb-2 ml-2">HSC</label>
                         <div class="row">
                             <div class="col-lg-4">
-                                <input type="text" class="form-control" id="hsc_name" name="hsc_name" placeholder="NAME OF SCHOOL" required>
+                                <input type="text" class="form-control" id="hsc_name" value="{{ old('hsc_name') }}" name="hsc_name" placeholder="NAME OF SCHOOL" required>
                             </div>
                             <div class="col-lg-4">
-                                <input type="text" class="form-control" id="hsc_date_exp" name="hsc_date_exp"
+                                <input type="text" class="form-control" id="hsc_date_exp" value="{{ old('hsc_date_exp') }}" name="hsc_date_exp"
                                 placeholder="DATE OF ENTRANCE/DATE OF GRADUATION" onfocus="(this.type='date')"
                                 onblur="if(!this.value) this.type='text';">
                             </div>
                             <div class="col-lg-4">
-                                <input type="text" class="form-control" id="hsc_location" name="hsc_location" placeholder="LOCATION" required>
+                                <input type="text" class="form-control" id="hsc_location" value="{{ old('hsc_location') }}" name="hsc_location" placeholder="LOCATION" required>
                             </div>
                         </div>
                     </div>
@@ -187,15 +187,15 @@
                         <label for="passport" class="mb-2 ml-2">BACHELOR</label>
                         <div class="row">
                             <div class="col-lg-4">
-                                <input type="text" class="form-control" id="bsc_name" name="bsc_name" placeholder="NAME OF SCHOOL">
+                                <input type="text" class="form-control" id="bsc_name" value="{{ old('bsc_name') }}" name="bsc_name" placeholder="NAME OF SCHOOL">
                             </div>
                             <div class="col-lg-4">
-                                <input type="text" class="form-control" id="bsc_date_exp" name="bsc_date_exp"
+                                <input type="text" class="form-control" id="bsc_date_exp" value="{{ old('bsc_date_exp') }}" name="bsc_date_exp"
                                 placeholder="DATE OF ENTRANCE/DATE OF GRADUATION" onfocus="(this.type='date')"
                                 onblur="if(!this.value) this.type='text';">
                             </div>
                             <div class="col-lg-4">
-                                <input type="text" class="form-control" id="bsc_location" name="bsc_location" placeholder="LOCATION">
+                                <input type="text" class="form-control" id="bsc_location" value="{{ old('bsc_location') }}" name="bsc_location" placeholder="LOCATION">
                             </div>
                         </div>
                     </div>
@@ -208,15 +208,15 @@
                         <label for="passport" class="mb-2 ml-2">MASTERS</label>
                         <div class="row">
                             <div class="col-lg-4">
-                                <input type="text" class="form-control" id="" name="msc_name" placeholder="NAME OF SCHOOL">
+                                <input type="text" class="form-control" id="msc_name" value="{{ old('msc_name') }}" name="msc_name" placeholder="NAME OF SCHOOL">
                             </div>
                             <div class="col-lg-4">
-                                <input type="text" class="form-control" id="msc_date_exp" name="msc_date_exp"
+                                <input type="text" class="form-control" id="msc_date_exp" value="{{ old('msc_date_exp') }}" name="msc_date_exp"
                                 placeholder="DATE OF ENTRANCE/DATE OF GRADUATION" onfocus="(this.type='date')"
                                 onblur="if(!this.value) this.type='text';">
                             </div>
                             <div class="col-lg-4">
-                                <input type="text" class="form-control" id="msc_location" name="msc_location" placeholder="LOCATION">
+                                <input type="text" class="form-control" id="msc_location" value="{{ old('msc_location') }}" name="msc_location" placeholder="LOCATION">
                             </div>
                         </div>
                     </div>
@@ -419,16 +419,16 @@
                         <label for="passport" class="mb-2 ml-2">FINANCIAL SUPPORTER</label>
                         <div class="row">
                             <div class="col-lg-3">
-                                <input type="text" class="form-control" id="s_name" name="s_name" placeholder="SUPPORTER NAME">
+                                <input type="text" class="form-control" id="s_name" value="{{ old('s_name') }}" name="s_name" placeholder="SUPPORTER NAME">
                             </div>
                             <div class="col-lg-3">
-                                <input type="text" class="form-control" id="s_phone" name="s_phone" placeholder="PHONE">
+                                <input type="text" class="form-control" id="s_phone" name="s_phone" value="{{ old('s_phone') }}" placeholder="PHONE">
                             </div>
                             <div class="col-lg-3">
-                                <input type="text" class="form-control" id="s_address" name="s_address" placeholder="SUPPORTER ADDRESS">
+                                <input type="text" class="form-control" id="s_address" name="s_address" value="{{ old('s_address') }}" placeholder="SUPPORTER ADDRESS">
                             </div>
                             <div class="col-lg-3">
-                                <input type="text" class="form-control" id="company_name" name="company_name" placeholder="COMPANY NAME">
+                                <input type="text" class="form-control" id="company_name" name="company_name" value="{{ old('company_name') }}" placeholder="COMPANY NAME">
                             </div>
                         </div>
                     </div>
