@@ -21,29 +21,29 @@
                                 </div>
                             @endif
                             <div class="col-md-12 form-group">
-                                <input type="text" name="name" class="form-control" id="name" placeholder="NAME" required>
+                                <input type="text" name="name" class="form-control" id="name" value="{{ old('name') }}" placeholder="NAME" required>
                             </div>
                         </div>
                         <div class="row">
                             <div class="col-md-12 form-group mt-3">
-                                <input type="text" class="form-control" name="city" id="city" placeholder="CITY" required>
+                                <input type="text" class="form-control" name="city" id="city" value="{{ old('city') }}" placeholder="CITY" required>
                             </div>
                         </div>
                         <div class="row">
                             <div class="col-md-12 form-group mt-3">
-                                <input type="text" class="form-control" name="qualification" id="qualification"
+                                <input type="text" class="form-control" name="qualification" value="{{ old('qualification') }}" id="qualification"
                                     placeholder="LAST QUALIFICATION" required>
                             </div>
                         </div>
                         <div class="row">
                             <div class="col-md-12 form-group mt-3">
-                                <input type="tel" class="form-control" name="phone" id="phone" placeholder="PHONE"
+                                <input type="tel" class="form-control" name="phone" value="{{ old('phone') }}" id="phone" placeholder="PHONE"
                                     pattern="[0-9]{11}" required>
                             </div>
                         </div>
                         <div class="row">
                             <div class="col-lg-12 form-group mt-3">
-                                <input type="text" class="form-control" id="booking_date" name="booking_date"
+                                <input type="text" class="form-control" id="booking_date" value="{{ old('booking_date') }}" name="booking_date"
                                 placeholder="DATE OF BOOKING" onfocus="(this.type='date')"
                                 onblur="if(!this.value) this.type='text';">
                             </div>

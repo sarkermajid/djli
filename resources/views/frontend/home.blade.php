@@ -13,7 +13,7 @@
 
                 <div class="row content">
                     <div class="col-lg-12" data-aos="fade-right">
-                        <h2>DHAKA JAPANESE LANGUAGE INSTITUTE</h2>
+                        <h2>DHAKA JAPANESE LANGUAGE INSTITUTE - ダッカ日本語学院</h2>
                         <p style="font-size: 18px;">Since 2017, We have been committed to helping students to fulfill their Dreams in Japan.In view of its continuity, we established the Dhaka Japanese Language Institute. We are more than a Language Institute in Dhaka. We are a team of passionate individuals who believe in the power of education to transform lives. We have a skilled team who are committed to helping each student fulfill their dreams with care.Our journey began with a simple vision – to help students achieve their dreams of studying abroad and experiencing new cultures. Over the years, we have helped thousands of students realize their potential and reach new heights in their academic and personal lives.</p>
                     </div>
                     <div class="col-lg-12 pt-3" data-aos="fade-right">
