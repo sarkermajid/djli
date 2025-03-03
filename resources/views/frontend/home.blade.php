@@ -2,7 +2,7 @@
 
 @section('frontend')
     <!-- ======= Hero Section ======= -->
-    <img src="{{ asset('frontend/assets/img/slide/hero-img.jpeg') }}" style="margin-top: 80px;" alt="" width="100%">
+    <img src="{{ asset('frontend/assets/img/slide/hero-img.jpeg') }}" style="margin-top: 120px;" alt="" width="100%">
     <!-- End Hero -->
 
     <main id="main">
@@ -46,7 +46,7 @@
               </div>
             <div class="container" data-aos="fade-up">
                 <div class="row">
-                    <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-3" data-aos="zoom-in" data-aos-delay="100">
                         <div class="icon-box iconbox-blue">
                             <h4 style="color: #EA232A">Language Schools and Universities Selection</h4>
                             <p>Choosing the right language school or university is a crucial step in your academic and
@@ -57,7 +57,7 @@
                                 selection process to ensure you make an informed decision.</p>
                         </div>
                     </div>
-                    <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-3" data-aos="zoom-in" data-aos-delay="100">
                         <div class="icon-box iconbox-blue">
                             <h4 style="color: #EA232A">Interview Preparation
                             </h4>
@@ -71,7 +71,7 @@
                             </p>
                         </div>
                     </div>
-                    <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-3" data-aos="zoom-in" data-aos-delay="100">
                         <div class="icon-box iconbox-blue">
                             <h4 style="color: #EA232A">Visa Application
                             </h4>
@@ -81,7 +81,7 @@
                     </div>
                 </div>
                 <div class="row mt-4">
-                    <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-3" data-aos="zoom-in" data-aos-delay="100">
                         <div class="icon-box iconbox-blue">
                             <h4 style="color: #EA232A">Application
                             </h4>
@@ -95,7 +95,7 @@
                             </p>
                         </div>
                     </div>
-                    <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-3" data-aos="zoom-in" data-aos-delay="100">
                         <div class="icon-box iconbox-blue">
                             <h4 style="color: #EA232A">Accommodation Support
                             </h4>
