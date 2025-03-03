@@ -1,6 +1,6 @@
   <!-- ======= Header ======= -->
   <header id="header" class="fixed-top">
-    <h6 id="breakingNews" class="text-center p-2" style="color: #EA232A; background-color:#000"></h6>
+    <h5 id="breakingNews" class="text-center p-2" style="color: #EA232A; background-color:#000"></h5>
     <div class="container d-flex align-items-center">
       <h1 class="logo me-auto"><a href="{{ route('home') }}"><img src="{{ asset('frontend/assets/img/LOGO DJLI.png') }}" alt="" width="100%"></a></h1>
       <nav id="navbar" class="navbar order-last order-lg-0">
@@ -18,7 +18,7 @@
 
       <div class="header-social-links d-flex">
         <a href="#" class="twitter"><i class="bu bi-twitter"></i></a>
-        <a href="#" class="facebook"><i class="bu bi-facebook"></i></a>
+        <a href="https://www.facebook.com/dhakajapaneselanguageinstitute" target="_blank" class="facebook"><i class="bu bi-facebook"></i></a>
         <a href="#" class="instagram"><i class="bu bi-instagram"></i></a>
         <a href="#" class="linkedin"><i class="bu bi-linkedin"></i></i></a>
       </div>

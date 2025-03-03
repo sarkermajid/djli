@@ -2,7 +2,7 @@
 
 @section('frontend')
         <!-- ======= Gallery Section ======= -->
-        <section id="portfolio" class="portfolio" style="margin-top: 80px;">
+        <section id="portfolio" class="portfolio" style="margin-top: 100px;">
             <div class="container">
                 <div class="section-title" data-aos="fade-up">
                     <h2>Gallery</h2>

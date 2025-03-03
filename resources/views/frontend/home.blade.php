@@ -2,7 +2,7 @@
 
 @section('frontend')
     <!-- ======= Hero Section ======= -->
-    <img src="{{ asset('frontend/assets/img/slide/hero-img.jpeg') }}" alt="" width="100%">
+    <img src="{{ asset('frontend/assets/img/slide/hero-img.jpeg') }}" style="margin-top: 80px;" alt="" width="100%">
     <!-- End Hero -->
 
     <main id="main">
@@ -123,10 +123,10 @@
                     @foreach ($branches as $branch)
                     <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
                         <div class="icon-box iconbox-blue">
-                            <img src="{{ asset($branch->image) }}" width="100%" style="border-radius: 20px; border:2px solid #EA232A; margin-bottom:10px;" alt="">
+                            <img src="{{ asset($branch->image) }}" width="100%" class="p-3" style="border-radius: 20px; border:2px solid #EA232A; margin-bottom:10px; height:350px;" alt="">
                             <h4>{{ $branch->branch_name }}</h4>
                             <address>{{ $branch->address }}</address>
-                            <p>{{ $branch->director_name }} (Director)</p>
+                            <p>Director: {{ $branch->director_name }}</p>
                             <P>Phone: {{ $branch->phone }}</P>
                             <p>Email: {{ $branch->email }}</p>
                         </div>

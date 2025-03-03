@@ -2,7 +2,7 @@
 
 @section('frontend')
     <section id="contact" class="contact">
-        <div class="container" style="margin-top: 80px;">
+        <div class="container" style="margin-top: 100px;">
             <div class="row mt-5 justify-content-center" data-aos="fade-up">
                 <div class="col-lg-12">
                     <form action="{{ route('submitBook') }}" method="POST" role="form" class="form-design">

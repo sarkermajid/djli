@@ -24,11 +24,11 @@ class BranchController extends Controller
     {
         $request->validate([
             'branch_name' => 'required|string|max:255',
-            'director_name' => 'required|string|max:255',
+            'director_name' => 'nullable|string|max:255',
             'address' => 'required|string|max:500',
             'phone' => 'required|regex:/^([0-9\s\-\+\(\)]*)$/|min:10|max:15',
-            'email' => 'required|email|max:255|unique:branches,email',
-            'image' => 'nullable|image|mimes:jpg,jpeg,png,gif|max:2048',
+            'email' => 'nullable|email|max:255|unique:branches,email',
+            'image' => 'required|image|mimes:jpg,jpeg,png,gif|max:2048',
         ]);
 
         $branch = new Branch();
@@ -50,7 +50,7 @@ class BranchController extends Controller
             'message' => 'Branch Added Successfully',
             'alert-type' => 'success'
         );
-        return redirect()->route('branches')->with($notification);
+        return redirect()->route('branches.all')->with($notification);
     }
 
     public function branchView($id)

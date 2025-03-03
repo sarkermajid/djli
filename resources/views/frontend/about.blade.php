@@ -2,7 +2,7 @@
 
 @section('frontend')
         <!-- ======= About Us Section ======= -->
-        <section id="about-us" class="about-us" style="margin-top: 80px;">
+        <section id="about-us" class="about-us" style="margin-top: 100px;">
             <div class="container" data-aos="fade-up">
                 <div class="section-title" data-aos="fade-up">
                     <h2>About Us</h2>
