@@ -20,10 +20,40 @@
                 <div class="card rounded">
                     <div class="card-body">
                         <div class="mt-1">
-                            <h3 class="text-center fw-bolder mb-0 text-uppercase">Total Submitted Forms</h3>
+                            <h4 class="text-center fw-bolder mb-0 text-uppercase">Total Submitted Forms</h4>
                         </div>
                         <div class="mt-2">
                             <h2 class="text-center fw-bolder mb-0 text-uppercase">({{ $submittedForm }})</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="d-none d-md-block col-md-12 col-xl-12 left-wrapper mt-3">
+                <div class="card rounded">
+                    <div class="card-body">
+                        <div class="mt-1">
+                            <h4 class="text-center fw-bolder mb-0 text-uppercase">Total Consultancy Bookings</h4>
+                        </div>
+                        <div class="mt-2">
+                            <h2 class="text-center fw-bolder mb-0 text-uppercase">({{ $consultancyBooking }})</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="d-none d-md-block col-md-12 col-xl-12 left-wrapper mt-3">
+                <div class="card rounded">
+                    <div class="card-body">
+                        <div class="mt-1">
+                            <h4 class="text-center fw-bolder mb-0 text-uppercase">Total Branches</h4>
+                        </div>
+                        <div class="mt-2">
+                            <h2 class="text-center fw-bolder mb-0 text-uppercase">({{ $branches }})</h2>
                         </div>
                     </div>
                 </div>

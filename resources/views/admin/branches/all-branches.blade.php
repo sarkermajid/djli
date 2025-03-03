@@ -17,7 +17,7 @@
                                 <tr>
                                     <th>Sl</th>
                                     <th>Name</th>
-                                    <th>Dirctor Name</th>
+                                    <th>Phone</th>
                                     <th>Action</th>
                                 </tr>
                             </thead>
@@ -26,7 +26,7 @@
                                     <tr>
                                         <td>{{ $key + 1 }}</td>
                                         <td>{{ $item->branch_name }}</td>
-                                        <td>{{ $item->director_name}}</td>
+                                        <td>{{ $item->phone}}</td>
                                         <td>
                                             <a href="{{ route('branch.view', ['id'=>$item->id]) }}" class="btn btn-inverse-info"> View </a>
                                             <a href="{{ route('branch.delete',['id'=>$item->id]) }}" id="delete" class="btn btn-inverse-danger"> Delete </a>

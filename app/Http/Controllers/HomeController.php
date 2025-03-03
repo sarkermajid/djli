@@ -36,7 +36,7 @@ class HomeController extends Controller
 
     public function branches()
     {
-        $branches = Branch::all();
+        $branches = Branch::orderBy('id','desc')->get();
         return view('frontend.branches',compact('branches'));
     }
 

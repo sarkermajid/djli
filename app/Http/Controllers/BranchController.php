@@ -10,7 +10,7 @@ class BranchController extends Controller
 {
     public function index()
     {
-        $branches = Branch::all();
+        $branches = Branch::orderBy('id','desc')->get();
         return view('admin.branches.all-branches',compact('branches'));
     }
 

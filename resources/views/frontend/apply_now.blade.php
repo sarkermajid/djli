@@ -233,7 +233,7 @@
                             <div class="col-lg-9">
                                 <!-- Yes/No Radio Button Option -->
                                 <div class="">
-                                    <label class="mb-2">DID YOU APPLY BEFORE?</label>
+                                    <label class="mb-2">DID YOU APPLY BEFORE IN JAPAN ?</label>
                                     <div class="form-check form-check-inline">
                                         <input class="form-check-input" type="radio" id="applied_yes" style="height: 15px;" name="apply_before" value="Yes">
                                         <label class="form-check-label" for="applied_yes">Yes</label>

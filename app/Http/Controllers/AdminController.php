@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Models\ApplicationForm;
+use App\Models\BookNow;
+use App\Models\Branch;
 use App\Models\DailyExpense;
 use App\Models\DailyMarket;
 use App\Models\DailySell;
@@ -17,7 +19,9 @@ class AdminController extends Controller
     public function AdminDashboard()
     {
         $submittedForm = ApplicationForm::count();
-        return view('admin.index',compact('submittedForm'));
+        $branches = Branch::count();
+        $consultancyBooking = BookNow::count();
+        return view('admin.index',compact('submittedForm','branches','consultancyBooking'));
     }
 
     public function AdminLogout(Request $request)
