@@ -455,7 +455,7 @@
                 <div class="col-lg-12">
                     <div class="form-group mt-3">
                         <label for="document" class="mb-2 ml-2">
-                            PLEASE SUBMIT ALL REQUIRED DOCUMENTS, INCLUDING SSC AND HSC CERTIFICATES, MARK SHEETS, NID, AND PASSPORT
+                            PLEASE SUBMIT ALL REQUIRED DOCUMENTS, INCLUDING SSC AND HSC CERTIFICATES, MARK SHEETS, NID, AND PASSPORT, ALL IN A SINGLE PDF FILE.
                         </label>
                         <div class="row">
                             <div class="col-lg-12">
