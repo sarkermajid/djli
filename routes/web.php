@@ -50,6 +50,8 @@ Route::middleware('auth')->group(function () {
         Route::get('admin/branch/add', 'branchAdd')->name('branch.add');
         Route::post('admin/branch/store', 'branchStore')->name('branch.store');
         Route::get('admin/branch/view/{id}', 'branchView')->name('branch.view');
+        Route::get('admin/branch/edit/{id}', 'branchEdit')->name('branch.edit');
+        Route::post('admin/branch/update/{id}', 'branchUpdate')->name('branch.update');
         Route::get('admin/branch/delete/{id}', 'branchDelete')->name('branch.delete');
     });
 
