@@ -471,7 +471,8 @@ h6 {
   line-height: 0;
   width: auto;
   height: auto;
-  background: rgba(255, 255, 255, 0.4);
+  margin-top: 100px;
+  background: rgba(0, 0, 0, 0.8);
   border-radius: 50px;
   transition: 0.3s;
   color: rgba(255, 255, 255, 0.6);
@@ -482,11 +483,11 @@ h6 {
   justify-content: center;
 }
 
-#hero .carousel-control-next-icon:hover,
+/* #hero .carousel-control-next-icon:hover,
 #hero .carousel-control-prev-icon:hover {
   background: rgba(255, 255, 255, 0.6);
   color: rgba(255, 255, 255, 0.8);
-}
+} */
 
 #hero .carousel-indicators li {
   list-style-type: none;
