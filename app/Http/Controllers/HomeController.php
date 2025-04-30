@@ -9,6 +9,7 @@ use App\Models\Branch;
 use App\Models\FamilyMember;
 use App\Models\GalleryModel;
 use App\Models\JapaneseExam;
+use App\Models\Slider;
 use App\Models\TeamMember;
 use Illuminate\Http\Request;
 
@@ -25,7 +26,8 @@ class HomeController extends Controller
     public function index()
     {
         $branches = Branch::all();
-        return view('frontend.home',compact('branches'));
+        $sliders = Slider::orderBy('sort_by','asc')->get();
+        return view('frontend.home',compact('branches','sliders'));
     }
 
     public function about()
