@@ -7,6 +7,7 @@ use App\Http\Controllers\BranchController;
 use App\Http\Controllers\ConsultancyBookController;
 use App\Http\Controllers\GalleryController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\SliderController;
 use App\Http\Controllers\TeamMemberController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
@@ -78,6 +79,15 @@ Route::middleware('auth')->group(function () {
         Route::get('admin/application-form', 'index')->name('application.form.all');
         Route::get('admin/application-form/view/{id}', 'applicationView')->name('application.form.view');
         Route::get('admin/application-form/delete/{id}', 'applicationDelete')->name('application.form.delete');
+    });
+
+    Route::controller(SliderController::class)->group(function(){
+        Route::get('admin/slider/images', 'sliderImages')->name('slider.images');
+        Route::get('admin/slider-image/add', 'sliderImageAdd')->name('slider.image.add');
+        Route::post('admin/slider-image/store', 'sliderImageStore')->name('slider.image.store');
+        Route::get('admin/slider-image/edit/{id}', 'sliderImageEdit')->name('slider.image.edit');
+        Route::post('admin/slider-image/update/{id}', 'sliderImageUpdate')->name('slider.image.update');
+        Route::get('admin/slider-image/delete/{id}', 'sliderImageDelete')->name('slider.image.delete');
     });
 
     Route::get('/export-application-form', [ApplicationFormExportController::class, 'export'])->name('export.application.form');

@@ -21,6 +21,13 @@
           <li class="nav-item nav-category">DJLI</li>
 
           <li class="nav-item">
+            <a class="nav-link" href="{{ route('slider.images') }}">
+              <i class="link-icon" data-feather="chevron-right"></i>
+              <span class="link-title">Slider Images</span>
+            </a>
+          </li>
+
+          <li class="nav-item">
             <a class="nav-link" href="{{ route('application.form.all') }}">
               <i class="link-icon" data-feather="chevron-right"></i>
               <span class="link-title">Submitted Forms</span>
