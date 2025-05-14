@@ -23,7 +23,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-require __DIR__.'/auth.php';
+require __DIR__ . '/auth.php';
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::get('/about', [HomeController::class, 'about'])->name('about');
@@ -35,7 +35,7 @@ Route::get('/apply-now', [HomeController::class, 'applyNow'])->name('applyNow');
 Route::post('/submit-form', [HomeController::class, 'submitForm'])->name('submitForm');
 Route::get('/book-now', [HomeController::class, 'bookNow'])->name('bookNow');
 Route::post('/submit-book-now', [HomeController::class, 'submitBook'])->name('submitBook');
-Route::get('djli-admin/login',[HomeController::class, 'djliLogin'])->name('djliLogin');
+Route::get('djli-admin/login', [HomeController::class, 'djliLogin'])->name('djliLogin');
 Route::middleware('auth')->group(function () {
     Route::controller(AdminController::class)->group(function () {
         Route::get('admin/dashboard', 'AdminDashboard')->name('admin.dashboard');
@@ -46,7 +46,7 @@ Route::middleware('auth')->group(function () {
         Route::post('admin/update/password', 'AdminUpdatePassword')->name('admin.update.password');
     });
 
-    Route::controller(BranchController::class)->group(function(){
+    Route::controller(BranchController::class)->group(function () {
         Route::get('admin/branches', 'index')->name('branches.all');
         Route::get('admin/branch/add', 'branchAdd')->name('branch.add');
         Route::post('admin/branch/store', 'branchStore')->name('branch.store');
@@ -56,32 +56,34 @@ Route::middleware('auth')->group(function () {
         Route::get('admin/branch/delete/{id}', 'branchDelete')->name('branch.delete');
     });
 
-    Route::controller(ConsultancyBookController::class)->group(function (){
+    Route::controller(ConsultancyBookController::class)->group(function () {
         Route::get('admin/consultancies', 'index')->name('consultancies.all');
         Route::get('admin/consultancies/delete/{id}', 'consultancyDelete')->name('consultancies.delete');
     });
 
-    Route::controller(TeamMemberController::class)->group(function(){
+    Route::controller(TeamMemberController::class)->group(function () {
         Route::get('admin/team-members', 'index')->name('team.members.all');
         Route::get('admin/team-member/add', 'teamMemberAdd')->name('team.member.add');
         Route::post('admin/team-member/store', 'teamMemberStore')->name('team.member.store');
         Route::get('admin/team-member/delete/{id}', 'teamMemberDelete')->name('team.member.delete');
     });
 
-    Route::controller(GalleryController::class)->group(function(){
+    Route::controller(GalleryController::class)->group(function () {
         Route::get('admin/gallery-image', 'index')->name('gallery.image.all');
         Route::get('admin/gallery-image/add', 'galleryImageAdd')->name('gallery.image.add');
         Route::post('admin/gallery-image/store', 'galleryImageStore')->name('gallery.image.store');
+        Route::get('admin/gallery-image/edit/{id}', 'galleryImageEdit')->name('gallery.image.edit');
+        Route::post('admin/gallery-image/update/{id}', 'galleryImageUpdate')->name('gallery.image.update');
         Route::get('admin/gallery-image/delete/{id}', 'galleryImageDelete')->name('gallery.image.delete');
     });
 
-    Route::controller(ApplicationFormController::class)->group(function(){
+    Route::controller(ApplicationFormController::class)->group(function () {
         Route::get('admin/application-form', 'index')->name('application.form.all');
         Route::get('admin/application-form/view/{id}', 'applicationView')->name('application.form.view');
         Route::get('admin/application-form/delete/{id}', 'applicationDelete')->name('application.form.delete');
     });
 
-    Route::controller(SliderController::class)->group(function(){
+    Route::controller(SliderController::class)->group(function () {
         Route::get('admin/slider/images', 'sliderImages')->name('slider.images');
         Route::get('admin/slider-image/add', 'sliderImageAdd')->name('slider.image.add');
         Route::post('admin/slider-image/store', 'sliderImageStore')->name('slider.image.store');
@@ -91,7 +93,6 @@ Route::middleware('auth')->group(function () {
     });
 
     Route::get('/export-application-form', [ApplicationFormExportController::class, 'export'])->name('export.application.form');
-
 });
 
 

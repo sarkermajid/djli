@@ -6,7 +6,8 @@
 
             <div class="carousel-inner" role="listbox">
                 @foreach ($sliders as $key => $slider)
-                    <div class="carousel-item {{ $key == 0 ? 'active' : '' }}" style="background-image: url('{{ asset($slider->image) }}');"></div>
+                    <div class="carousel-item {{ $key == 0 ? 'active' : '' }}"
+                        style="background-image: url('{{ asset($slider->image) }}');"></div>
                 @endforeach
             </div>
 
@@ -42,14 +43,14 @@
                             their academic and personal lives.</p>
                     </div>
                     <div class="col-lg-12 pt-3" data-aos="fade-right">
-                        <h3>Book a Free Consultation 📞</h3>
+                        <h3>Book a Free Consultation <img src="{{ asset('frontend/assets/img/support.gif') }}"
+                                alt="" width="80"></h3>
                         <p>Take the first step toward your dream of studying in Japan! Our expert team is here to guide you
                             through language learning, university selection, visa applications, and more—all for free.</p>
                         <p><i class="ri-check-double-line"></i> Personalized Guidance</p>
                         <p><i class="ri-check-double-line"></i> Expert Advice on Study & Visa Process</p>
                         <p><i class="ri-check-double-line"></i>Hassle-Free Application Support</p>
-                        <a href="{{ route('bookNow') }}" class="btn mb-4"
-                            style="border:1px solid #EA232A; background-color:#EA232A; color:white; width:200px; padding:10px;">Free
+                        <a href="{{ route('bookNow') }}" class="btn mb-4 btn-grad">Free
                             Consultancy</a>
                     </div>
                     <div class="col-lg-12" data-aos="fade-right">
@@ -68,8 +69,7 @@
                             minimizes mistakes and ensures completeness.</p>
                         <p><i class="ri-check-double-line"></i> Data Security – Your personal information is protected with
                             advanced security measures, ensuring confidentiality and privacy.</p>
-                        <a href="{{ route('applyNow') }}" class="btn mb-4"
-                            style="border:1px solid #EA232A; background-color:#EA232A; color:white; width:200px; padding:10px;">Apply
+                        <a href="{{ route('applyNow') }}" class="btn mb-4  btn-grad">Apply
                             Now</a>
                     </div>
                 </div>

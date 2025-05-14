@@ -29,6 +29,7 @@
                                         <td>{{ $item->title }}</td>
                                         <td><img src="{{ asset($item->image) }}" alt="" style="height: 50px; width:50px;"></td>
                                         <td>
+                                            <a href="{{ route('gallery.image.edit', ['id'=>$item->id]) }}" class="btn btn-inverse-primary"> Edit </a>
                                             <a href="{{ route('gallery.image.delete',['id'=>$item->id]) }}" id="delete" class="btn btn-inverse-danger"> Delete </a>
                                         </td>
                                     </tr>

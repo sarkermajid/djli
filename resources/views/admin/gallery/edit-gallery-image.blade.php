@@ -27,51 +27,15 @@
                                     </ul>
                                 </div>
                             @endif
-                            <form method="POST" action="{{ route('branch.update', ['id' => $branch->id]) }}"
+                            <form method="POST" action="{{ route('gallery.image.update', ['id' => $gallery->id]) }}"
                                 class="forms-sample" id="myForm" enctype="multipart/form-data">
                                 @csrf
                                 <div class="row">
                                     <div class="col-md-12">
                                         <div class="form-group mb-3">
-                                            <label for="branch_name" class="form-label">Branch Name</label>
-                                            <input type="text" value="{{ $branch->branch_name }}" name="branch_name"
-                                                class="form-control" placeholder="Branch Name">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-md-12">
-                                        <div class="form-group mb-3">
-                                            <label for="director_name" class="form-label">Director Name</label>
-                                            <input type="text" value="{{ $branch->director_name }}" name="director_name"
-                                                class="form-control" placeholder="Director Name">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-md-12">
-                                        <div class="form-group mb-3">
-                                            <label for="address" class="form-label">Address</label>
-                                            <input type="text" value="{{ $branch->address }}" name="address"
-                                                class="form-control" placeholder="Address">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-md-12">
-                                        <div class="form-group mb-3">
-                                            <label for="phone" class="form-label">Phone</label>
-                                            <input type="text" value="{{ $branch->phone }}" name="phone"
-                                                class="form-control" placeholder="Phone">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-md-12">
-                                        <div class="form-group mb-3">
-                                            <label for="email" class="form-label">Email</label>
-                                            <input type="text" value="{{ $branch->email }}" name="email"
-                                                class="form-control" placeholder="Email">
+                                            <label for="title" class="form-label">Title</label>
+                                            <input type="text" value="{{ $gallery->title }}" name="title"
+                                                class="form-control" placeholder="Title">
                                         </div>
                                     </div>
                                 </div>
@@ -79,8 +43,7 @@
                                     <div class="col-md-12">
                                         <div class="form-group mb-3">
                                             <label for="image" class="form-label">Image</label>
-                                            <br>
-                                            <img src="{{ asset($branch->image) }}" alt="" width="150">
+                                            <img src="{{ asset($gallery->image) }}" alt="" width="150">
                                             <input type="file" name="image" class="form-control" id="image">
 
                                             <img src="" id="showPhoto">
