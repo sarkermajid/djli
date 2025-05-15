@@ -65,6 +65,8 @@ Route::middleware('auth')->group(function () {
         Route::get('admin/team-members', 'index')->name('team.members.all');
         Route::get('admin/team-member/add', 'teamMemberAdd')->name('team.member.add');
         Route::post('admin/team-member/store', 'teamMemberStore')->name('team.member.store');
+        Route::get('admin/team-member/edit/{id}', 'teamMemberEdit')->name('team.member.edit');
+        Route::post('admin/team-member/update/{id}', 'teamMemberUpdate')->name('team.member.update');
         Route::get('admin/team-member/delete/{id}', 'teamMemberDelete')->name('team.member.delete');
     });
 

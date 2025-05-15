@@ -28,6 +28,14 @@
                           class="{{ Route::currentRouteName() == 'contact' ? 'active' : '' }}">Contact</a></li>
                   <li><a href="{{ route('applyNow') }}"
                           class="{{ Route::currentRouteName() == 'applyNow' ? 'active' : '' }}">Apply Now</a></li>
+                  <li class="tooltip-container">
+                      <a href="{{ route('applyNow') }}"
+                          class="{{ Route::currentRouteName() == 'applyNow' ? 'active' : '' }}">
+                          <img src="{{ asset('frontend/assets/img/notice-icon-png.webp') }}" width="50"
+                              alt="" class="shake-icon">
+                          <span class="custom-tooltip">Notice</span>
+                      </a>
+                  </li>
               </ul>
               <i class="bi bi-list mobile-nav-toggle"></i>
           </nav>
@@ -42,3 +50,55 @@
 
       </div>
   </header><!-- End Header -->
+
+  <style>
+      @keyframes shake {
+          0% {
+              transform: translate(1px, 1px) rotate(0deg);
+          }
+
+          10% {
+              transform: translate(-1px, -2px) rotate(-1deg);
+          }
+
+          20% {
+              transform: translate(-3px, 0px) rotate(1deg);
+          }
+
+          30% {
+              transform: translate(3px, 2px) rotate(0deg);
+          }
+
+          40% {
+              transform: translate(1px, -1px) rotate(1deg);
+          }
+
+          50% {
+              transform: translate(-1px, 2px) rotate(-1deg);
+          }
+
+          60% {
+              transform: translate(-3px, 1px) rotate(0deg);
+          }
+
+          70% {
+              transform: translate(3px, 1px) rotate(-1deg);
+          }
+
+          80% {
+              transform: translate(-1px, -1px) rotate(1deg);
+          }
+
+          90% {
+              transform: translate(1px, 2px) rotate(0deg);
+          }
+
+          100% {
+              transform: translate(1px, -2px) rotate(-1deg);
+          }
+      }
+
+      .shake-icon {
+          animation: shake 1s infinite;
+      }
+  </style>

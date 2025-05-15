@@ -29,7 +29,7 @@ class TeamMemberController extends Controller
         $teamMember = new TeamMember();
         $teamMember->name = $request->name;
         $teamMember->designation = $request->designation;
-       // Image upload
+        // Image upload
         if ($request->hasFile('image')) {
             $image = $request->file('image');
             $imageName = hexdec(uniqid()) . '.' . $image->getClientOriginalExtension();
@@ -45,10 +45,43 @@ class TeamMemberController extends Controller
         return redirect()->route('team.members.all')->with($notification);
     }
 
+    public function teamMemberEdit($id)
+    {
+        $teamMember = TeamMember::find($id);
+        return view('admin.team.edit-team-member', compact('teamMember'));
+    }
+
+    public function teamMemberUpdate(Request $request, $id)
+    {
+        $request->validate([
+            'name' => 'required|string|max:255',
+            'designation' => 'required|string|max:255',
+        ]);
+        $teamMember = TeamMember::find($id);
+        $teamMember->name = $request->name;
+        // Image upload
+        if ($request->hasFile('image')) {
+            if (file_exists($teamMember->image)) {
+                unlink($teamMember->image);
+            }
+            $image = $request->file('image');
+            $imageName = hexdec(uniqid()) . '.' . $image->getClientOriginalExtension();
+            $image->move('uploads/teamMemberes', $imageName);
+            $save_url = 'uploads/teamMemberes/' . $imageName;
+            $teamMember->image = $save_url;
+        }
+        $teamMember->save();
+        $notification = array(
+            'message' => 'Team Member Updated Successfully',
+            'alert-type' => 'success'
+        );
+        return redirect()->route('team.members.all')->with($notification);
+    }
+
     public function teamMemberDelete($id)
     {
         $teamMember = TeamMember::find($id);
-        if(file_exists($teamMember->image)){
+        if (file_exists($teamMember->image)) {
             unlink($teamMember->image);
         }
         $teamMember->delete();
