@@ -29,8 +29,8 @@
                   <li><a href="{{ route('applyNow') }}"
                           class="{{ Route::currentRouteName() == 'applyNow' ? 'active' : '' }}">Apply Now</a></li>
                   <li class="tooltip-container">
-                      <a href="{{ route('applyNow') }}"
-                          class="{{ Route::currentRouteName() == 'applyNow' ? 'active' : '' }}">
+                      <a href="{{ route('notice') }}"
+                          class="{{ Route::currentRouteName() == 'notice' ? 'active' : '' }}">
                           <img src="{{ asset('frontend/assets/img/notice-icon-png.webp') }}" width="50"
                               alt="" class="shake-icon">
                           <span class="custom-tooltip">Notice</span>

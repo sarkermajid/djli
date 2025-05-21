@@ -9,6 +9,7 @@ use App\Models\Branch;
 use App\Models\FamilyMember;
 use App\Models\GalleryModel;
 use App\Models\JapaneseExam;
+use App\Models\Notice;
 use App\Models\Slider;
 use App\Models\TeamMember;
 use Illuminate\Http\Request;
@@ -17,35 +18,35 @@ class HomeController extends Controller
 {
     public function djliLogin()
     {
-        if(auth()->user()){
+        if (auth()->user()) {
             return view('admin.admin_dashboard');
-        }else{
+        } else {
             return view('frontend.login');
         }
     }
     public function index()
     {
         $branches = Branch::all();
-        $sliders = Slider::orderBy('sort_by','asc')->get();
-        return view('frontend.home',compact('branches','sliders'));
+        $sliders = Slider::orderBy('sort_by', 'asc')->get();
+        return view('frontend.home', compact('branches', 'sliders'));
     }
 
     public function about()
     {
         $teamMembers = TeamMember::orderBy('id', 'desc')->get();
-        return view('frontend.about',compact('teamMembers'));
+        return view('frontend.about', compact('teamMembers'));
     }
 
     public function branches()
     {
-        $branches = Branch::orderBy('id','desc')->get();
-        return view('frontend.branches',compact('branches'));
+        $branches = Branch::orderBy('id', 'desc')->get();
+        return view('frontend.branches', compact('branches'));
     }
 
     public function gallery()
     {
         $galleries = GalleryModel::all();
-        return view('frontend.gallery',compact('galleries'));
+        return view('frontend.gallery', compact('galleries'));
     }
 
     public function services()
@@ -65,6 +66,18 @@ class HomeController extends Controller
     public function bookNow()
     {
         return view('frontend.book_now');
+    }
+
+    public function notice()
+    {
+        $notices = Notice::orderBy('id', 'desc')->get();
+        return view('frontend.notice', compact('notices'));
+    }
+
+    public function webNoticeView($id)
+    {
+        $notice = Notice::find($id);
+        return view('frontend.web-notice-view', compact('notice'));
     }
 
     public function submitForm(Request $request)
@@ -139,9 +152,9 @@ class HomeController extends Controller
         // Document upload
         if ($request->hasFile('document')) {
             $document = $request->file('document');
-            $documentName = hexdec(uniqid()) . '.'. $document->getClientOriginalExtension();
+            $documentName = hexdec(uniqid()) . '.' . $document->getClientOriginalExtension();
             $document->move('uploads/applicants_doc', $documentName);
-            $save_url = 'uploads/applicants_doc/'. $documentName;
+            $save_url = 'uploads/applicants_doc/' . $documentName;
             $applicationForm->document = $save_url;
         }
 
@@ -189,7 +202,6 @@ class HomeController extends Controller
 
 
         return redirect()->back()->with('success', 'Your Application has been submitted successfully. We will contact you soon.');
-
     }
 
     public function submitBook(Request $request)
@@ -202,6 +214,5 @@ class HomeController extends Controller
         $bookNow->booking_date = $request->booking_date;
         $bookNow->save();
         return redirect()->back()->with('success', 'Your booking request has been submitted successfully. We will contact you soon.');
-
     }
 }

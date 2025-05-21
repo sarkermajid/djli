@@ -7,6 +7,7 @@ use App\Http\Controllers\BranchController;
 use App\Http\Controllers\ConsultancyBookController;
 use App\Http\Controllers\GalleryController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\NoticeController;
 use App\Http\Controllers\SliderController;
 use App\Http\Controllers\TeamMemberController;
 use App\Http\Controllers\UserController;
@@ -32,6 +33,8 @@ Route::get('/services', [HomeController::class, 'services'])->name('services');
 Route::get('/gallery', [HomeController::class, 'gallery'])->name('gallery');
 Route::get('/contact', [HomeController::class, 'contact'])->name('contact');
 Route::get('/apply-now', [HomeController::class, 'applyNow'])->name('applyNow');
+Route::get('/notice', [HomeController::class, 'notice'])->name('notice');
+Route::get('/web-notice-view/{id}', [HomeController::class, 'webNoticeView'])->name('webNoticeView');
 Route::post('/submit-form', [HomeController::class, 'submitForm'])->name('submitForm');
 Route::get('/book-now', [HomeController::class, 'bookNow'])->name('bookNow');
 Route::post('/submit-book-now', [HomeController::class, 'submitBook'])->name('submitBook');
@@ -92,6 +95,16 @@ Route::middleware('auth')->group(function () {
         Route::get('admin/slider-image/edit/{id}', 'sliderImageEdit')->name('slider.image.edit');
         Route::post('admin/slider-image/update/{id}', 'sliderImageUpdate')->name('slider.image.update');
         Route::get('admin/slider-image/delete/{id}', 'sliderImageDelete')->name('slider.image.delete');
+    });
+
+    Route::controller(NoticeController::class)->group(function () {
+        Route::get('admin/notices', 'index')->name('notice.all');
+        Route::get('admin/notice/add', 'noticeAdd')->name('notice.add');
+        Route::post('admin/notice/store', 'noticeStore')->name('notice.store');
+        Route::get('admin/notice/view/{id}', 'noticeView')->name('notice.view');
+        Route::get('admin/notice/edit/{id}', 'noticeEdit')->name('notice.edit');
+        Route::post('admin/notice/update/{id}', 'noticeUpdate')->name('notice.update');
+        Route::get('admin/notice/delete/{id}', 'noticeDelete')->name('notice.delete');
     });
 
     Route::get('/export-application-form', [ApplicationFormExportController::class, 'export'])->name('export.application.form');
